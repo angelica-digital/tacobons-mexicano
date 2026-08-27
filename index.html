@@ -49,7 +49,7 @@
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 80px;
+    padding-top: 88px;
   }
 
   h1, h2, h3, h4 {
@@ -115,7 +115,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     z-index: 9999;
-    padding: 10px 0;
+    padding: 14px 0;
     transition: all 0.3s ease;
   }
 
@@ -129,30 +129,11 @@
     gap: 24px;
   }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    line-height: 0;
-  }
-
-  .logo-img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
-    display: block;
-    filter: drop-shadow(0 0 8px rgba(255, 87, 34, 0.35));
-    transition: transform 0.3s ease;
-  }
-
-  .logo:hover .logo-img {
-    transform: scale(1.05);
-  }
-
   .nav-links {
     display: flex;
     gap: 28px;
     list-style: none;
+    margin-left: auto;
   }
 
   .nav-links a {
@@ -212,13 +193,34 @@
     cursor: pointer;
   }
 
+  /* ========== LOGO REPOSICIONADO (debajo del navbar, antes del badge) ========== */
+  .hero-logo-wrapper {
+    text-align: center;
+    padding: 18px 24px 0 24px;
+    background: linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
+  }
+
+  .hero-logo {
+    height: 96px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 14px rgba(255, 87, 34, 0.45));
+    transition: transform 0.3s ease;
+  }
+
+  .hero-logo:hover {
+    transform: scale(1.04);
+  }
+
   /* ========== HERO ========== */
   .hero {
     position: relative;
     min-height: 92vh;
     display: flex;
     align-items: center;
-    padding: 80px 24px;
+    padding: 20px 24px 80px 24px;
     overflow: hidden;
     background:
       radial-gradient(ellipse at top right, rgba(255, 87, 34, 0.15) 0%, transparent 50%),
@@ -1021,11 +1023,11 @@
   @media (max-width: 968px) {
     body { padding-top: 110px; }
     .agency-banner { font-size: 11px; padding: 8px 12px; }
-    .navbar { top: 36px; padding: 8px 0; }
+    .navbar { top: 36px; padding: 12px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
     .nav-cta { padding: 9px 16px; font-size: 13px; }
-    .logo-img { height: 40px; }
+    .hero-logo { height: 80px; }
 
     .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-content .badge { margin-left: auto; margin-right: auto; }
@@ -1040,13 +1042,14 @@
 
   @media (max-width: 580px) {
     section { padding: 70px 20px; }
-    .hero { padding: 60px 20px; min-height: auto; }
+    .hero { padding: 20px 20px 60px 20px; min-height: auto; }
     .hero-visual { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
     .protein-card:nth-child(1) { grid-row: auto; }
     .protein-card:nth-child(4) { grid-column: auto; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
     .navbar-inner { padding: 0 16px; }
-    .logo-img { height: 36px; }
+    .hero-logo { height: 64px; }
+    .hero-logo-wrapper { padding: 12px 20px 0 20px; }
   }
 </style>
 </head>
@@ -1055,9 +1058,6 @@
 <!-- ========== NAVBAR ========== -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <a href="#" class="logo" aria-label="TacoBons - Inicio">
-      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="logo-img">
-    </a>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#menu">Menú Mexicano</a></li>
@@ -1070,6 +1070,11 @@
     <button class="menu-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
+
+<!-- ========== LOGO REPOSICIONADO (arriba del badge "¡Abierto ahora!") ========== -->
+<div class="hero-logo-wrapper">
+  <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo mx-auto block h-20 md:h-24 w-auto object-contain my-4">
+</div>
 
 <!-- ========== HERO ========== -->
 <section class="hero" id="inicio">
@@ -1392,9 +1397,9 @@
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      navbar.style.padding = '6px 0';
+      navbar.style.padding = '8px 0';
     } else {
-      navbar.style.padding = '10px 0';
+      navbar.style.padding = '14px 0';
     }
   });
 </script>
