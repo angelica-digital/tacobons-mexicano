@@ -49,7 +49,7 @@
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 80px;
   }
 
   h1, h2, h3, h4 {
@@ -107,7 +107,7 @@
   /* ========== HEADER / NAVBAR ========== */
   .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     background: rgba(18, 13, 10, 0.95);
@@ -130,22 +130,23 @@
   }
 
   .logo {
-    font-family: 'Bungee', cursive;
-    font-size: 28px;
-    background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 50%, var(--green) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 1px;
     display: flex;
     align-items: center;
     gap: 6px;
+    line-height: 0;
   }
 
-  .logo::after {
-    content: '🌮';
-    -webkit-text-fill-color: initial;
-    filter: drop-shadow(0 0 8px rgba(255, 87, 34, 0.5));
+  .logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(255, 87, 34, 0.35));
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover .logo-img {
+    transform: scale(1.05);
   }
 
   .nav-links {
@@ -1018,12 +1019,13 @@
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 968px) {
-    body { padding-top: 56px; }
+    body { padding-top: 110px; }
     .agency-banner { font-size: 11px; padding: 8px 12px; }
-    .navbar { top: 0; padding: 8px 0; }
+    .navbar { top: 36px; padding: 8px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
     .nav-cta { padding: 9px 16px; font-size: 13px; }
+    .logo-img { height: 40px; }
 
     .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-content .badge { margin-left: auto; margin-right: auto; }
@@ -1044,7 +1046,7 @@
     .protein-card:nth-child(4) { grid-column: auto; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
     .navbar-inner { padding: 0 16px; }
-    .logo { font-size: 22px; }
+    .logo-img { height: 36px; }
   }
 </style>
 </head>
@@ -1053,7 +1055,9 @@
 <!-- ========== NAVBAR ========== -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <a href="#" class="logo">TACOBONS</a>
+    <a href="#" class="logo" aria-label="TacoBons - Inicio">
+      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="logo-img">
+    </a>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#menu">Menú Mexicano</a></li>
@@ -1360,7 +1364,7 @@
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const offsetTop = target.offsetTop - 70;
+        const offsetTop = target.offsetTop - 130;
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     });
