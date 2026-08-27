@@ -115,7 +115,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     z-index: 9999;
-    padding: 14px 0;
+    padding: 18px 0;
     transition: all 0.3s ease;
   }
 
@@ -199,7 +199,7 @@
     min-height: 92vh;
     display: flex;
     align-items: center;
-    padding: 80px 24px;
+    padding: 60px 24px 80px 24px;
     overflow: hidden;
     background:
       radial-gradient(ellipse at top right, rgba(255, 87, 34, 0.15) 0%, transparent 50%),
@@ -242,12 +242,12 @@
   }
 
   .hero-content .hero-logo {
-    height: 64px;
+    height: 90px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     display: block;
-    filter: drop-shadow(0 0 12px rgba(255, 87, 34, 0.45));
+    filter: drop-shadow(0 0 14px rgba(255, 87, 34, 0.5));
     transition: transform 0.3s ease;
   }
 
@@ -1016,11 +1016,11 @@
   @media (max-width: 968px) {
     body { padding-top: 110px; }
     .agency-banner { font-size: 11px; padding: 8px 12px; }
-    .navbar { top: 36px; padding: 12px 0; }
+    .navbar { top: 36px; padding: 14px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
     .nav-cta { padding: 9px 16px; font-size: 13px; }
-    .hero-content .hero-logo { height: 56px; }
+    .hero-content .hero-logo { height: 72px; margin-bottom: 24px; }
 
     .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-content .hero-logo { margin-left: auto; margin-right: auto; }
@@ -1036,13 +1036,13 @@
 
   @media (max-width: 580px) {
     section { padding: 70px 20px; }
-    .hero { padding: 60px 20px; min-height: auto; }
+    .hero { padding: 40px 20px 60px 20px; min-height: auto; }
     .hero-visual { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
     .protein-card:nth-child(1) { grid-row: auto; }
     .protein-card:nth-child(4) { grid-column: auto; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
     .navbar-inner { padding: 0 16px; }
-    .hero-content .hero-logo { height: 48px; }
+    .hero-content .hero-logo { height: 60px; }
   }
 </style>
 </head>
@@ -1068,8 +1068,8 @@
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
-      <!-- LOGO alineado a la izquierda, encima del badge -->
-      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo h-16 w-auto mb-4 object-contain">
+      <!-- LOGO con buen espacio, alineado a la izquierda -->
+      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo">
 
       <div class="badge">
         <span class="dot"></span> ¡Abierto ahora en La Tebaida!
@@ -1388,9 +1388,9 @@
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      navbar.style.padding = '8px 0';
+      navbar.style.padding = '10px 0';
     } else {
-      navbar.style.padding = '14px 0';
+      navbar.style.padding = '18px 0';
     }
   });
 </script>
