@@ -49,7 +49,7 @@
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 88px;
+    padding-top: 60px;
   }
 
   h1, h2, h3, h4 {
@@ -107,7 +107,7 @@
   /* ========== HEADER / NAVBAR ========== */
   .navbar {
     position: fixed;
-    top: 40px;
+    top: 0;
     left: 0;
     right: 0;
     background: rgba(18, 13, 10, 0.95);
@@ -115,7 +115,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     z-index: 9999;
-    padding: 18px 0;
+    padding: 10px 0;
     transition: all 0.3s ease;
   }
 
@@ -125,7 +125,7 @@
     padding: 0 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 24px;
   }
 
@@ -133,7 +133,6 @@
     display: flex;
     gap: 28px;
     list-style: none;
-    margin-left: auto;
   }
 
   .nav-links a {
@@ -1014,9 +1013,9 @@
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 968px) {
-    body { padding-top: 110px; }
-    .agency-banner { font-size: 11px; padding: 8px 12px; }
-    .navbar { top: 36px; padding: 14px 0; }
+    body { padding-top: 56px; }
+    .agency-banner { display: none; }
+    .navbar { padding: 8px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
     .nav-cta { padding: 9px 16px; font-size: 13px; }
@@ -1049,8 +1048,8 @@
 <body>
 
 <!-- ========== NAVBAR ========== -->
-<nav class="navbar">
-  <div class="navbar-inner">
+<nav class="navbar fixed top-0 left-0 w-full z-50">
+  <div class="navbar-inner justify-end py-2">
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#menu">Menú Mexicano</a></li>
@@ -1068,7 +1067,7 @@
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
-      <!-- LOGO con buen espacio, alineado a la izquierda -->
+      <!-- LOGO oficial intacto en la Hero Section -->
       <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo">
 
       <div class="badge">
@@ -1360,7 +1359,7 @@
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const offsetTop = target.offsetTop - 130;
+        const offsetTop = target.offsetTop - 70;
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     });
@@ -1388,9 +1387,9 @@
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      navbar.style.padding = '10px 0';
+      navbar.style.padding = '6px 0';
     } else {
-      navbar.style.padding = '18px 0';
+      navbar.style.padding = '10px 0';
     }
   });
 </script>
