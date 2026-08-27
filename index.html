@@ -193,34 +193,13 @@
     cursor: pointer;
   }
 
-  /* ========== LOGO REPOSICIONADO (debajo del navbar, antes del badge) ========== */
-  .hero-logo-wrapper {
-    text-align: center;
-    padding: 18px 24px 0 24px;
-    background: linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
-  }
-
-  .hero-logo {
-    height: 96px;
-    width: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    filter: drop-shadow(0 0 14px rgba(255, 87, 34, 0.45));
-    transition: transform 0.3s ease;
-  }
-
-  .hero-logo:hover {
-    transform: scale(1.04);
-  }
-
   /* ========== HERO ========== */
   .hero {
     position: relative;
     min-height: 92vh;
     display: flex;
     align-items: center;
-    padding: 20px 24px 80px 24px;
+    padding: 80px 24px;
     overflow: hidden;
     background:
       radial-gradient(ellipse at top right, rgba(255, 87, 34, 0.15) 0%, transparent 50%),
@@ -260,6 +239,20 @@
     width: 100%;
     position: relative;
     z-index: 2;
+  }
+
+  .hero-content .hero-logo {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(255, 87, 34, 0.45));
+    transition: transform 0.3s ease;
+  }
+
+  .hero-content .hero-logo:hover {
+    transform: scale(1.04);
   }
 
   .hero-content .badge {
@@ -1027,9 +1020,10 @@
     .nav-links { display: none; }
     .menu-toggle { display: block; }
     .nav-cta { padding: 9px 16px; font-size: 13px; }
-    .hero-logo { height: 80px; }
+    .hero-content .hero-logo { height: 56px; }
 
     .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero-content .hero-logo { margin-left: auto; margin-right: auto; }
     .hero-content .badge { margin-left: auto; margin-right: auto; }
     .hero-buttons { justify-content: center; }
     .hero-stats { justify-content: center; }
@@ -1042,14 +1036,13 @@
 
   @media (max-width: 580px) {
     section { padding: 70px 20px; }
-    .hero { padding: 20px 20px 60px 20px; min-height: auto; }
+    .hero { padding: 60px 20px; min-height: auto; }
     .hero-visual { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
     .protein-card:nth-child(1) { grid-row: auto; }
     .protein-card:nth-child(4) { grid-column: auto; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
     .navbar-inner { padding: 0 16px; }
-    .hero-logo { height: 64px; }
-    .hero-logo-wrapper { padding: 12px 20px 0 20px; }
+    .hero-content .hero-logo { height: 48px; }
   }
 </style>
 </head>
@@ -1071,15 +1064,13 @@
   </div>
 </nav>
 
-<!-- ========== LOGO REPOSICIONADO (arriba del badge "¡Abierto ahora!") ========== -->
-<div class="hero-logo-wrapper">
-  <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo mx-auto block h-20 md:h-24 w-auto object-contain my-4">
-</div>
-
 <!-- ========== HERO ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
+      <!-- LOGO alineado a la izquierda, encima del badge -->
+      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo h-16 w-auto mb-4 object-contain">
+
       <div class="badge">
         <span class="dot"></span> ¡Abierto ahora en La Tebaida!
       </div>
