@@ -583,10 +583,11 @@
     transform: scale(1.04);
   }
 
+  /* ETIQUETA ROSA MOVIDA A LA ESQUINA INFERIOR IZQUIERDA (EVITA TAPAR EL TEXTO DE LA IMAGEN) */
   .menu-card-badge {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    bottom: 14px;
+    left: 14px;
     background: var(--logo-pink);
     color: white;
     padding: 6px 14px;
@@ -730,8 +731,8 @@
 
   .promo-card-badge {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    bottom: 14px;
+    left: 14px;
     background: var(--logo-yellow);
     color: var(--bg-dark);
     padding: 6px 14px;
@@ -1115,7 +1116,7 @@
     transform: scale(1.15);
   }
 
-  /* ========== RESPONSIVE & AJUSTE MÓVIL EXCLUSIVO PARA SUBIR LA CAJA Y SEPARAR BORDES ========== */
+  /* ========== RESPONSIVE ========== */
   @media (max-width: 1024px) {
     .combos-tab-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1137,7 +1138,6 @@
     .hero-stats { justify-content: center; }
     .hero-visual { margin: 0 auto; }
 
-    /* SUBIMOS LA CAJA EN MÓVIL Y LE DAMOS AIRE ABAJO */
     .menu-tabs-wrapper {
       margin-top: -30px !important;
       margin-bottom: 35px !important;
@@ -1404,7 +1404,7 @@
       </div>
     </div>
 
-    <!-- ABA 3: JUGOS & BEBIDAS (100% EMPAREJADO CON CADA IMAGEN Y 2 PÁRRAFOS EN MANGO) -->
+    <!-- ABA 3: JUGOS & BEBIDAS (ETIQUETAS MOVIDAS A LA ESQUINA INFERIOR IZQUIERDA) -->
     <div id="tab-bebidas" class="tab-pane">
       <div class="carousel-container">
         <button class="carousel-nav-btn carousel-prev" onclick="scrollCarousel(-1)" aria-label="Anterior">
@@ -1415,7 +1415,7 @@
         </button>
 
         <div class="carousel-track" id="drinksCarousel">
-          <!-- Bebida 1: Coca-Cola Personal -->
+          <!-- Bebida 1 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1435,7 +1435,7 @@
             </div>
           </div>
 
-          <!-- Bebida 2: Gaseosa Quatro Toronja -->
+          <!-- Bebida 2 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1455,7 +1455,7 @@
             </div>
           </div>
 
-          <!-- Bebida 3: Agua Pool con Gas -->
+          <!-- Bebida 3 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1475,7 +1475,7 @@
             </div>
           </div>
 
-          <!-- Bebida 4: Jugo Hit de Mango (Con descripción en dos párrafos exactos) -->
+          <!-- Bebida 4 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1495,7 +1495,7 @@
             </div>
           </div>
 
-          <!-- Bebida 5: Jugo Hit de Mora -->
+          <!-- Bebida 5 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1515,7 +1515,7 @@
             </div>
           </div>
 
-          <!-- Bebida 6: Jugo Hit Naranja Piña -->
+          <!-- Bebida 6 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1535,7 +1535,7 @@
             </div>
           </div>
 
-          <!-- Bebida 7: Jugo Hit Frutas Tropicales -->
+          <!-- Bebida 7 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1555,7 +1555,7 @@
             </div>
           </div>
 
-          <!-- Bebida 8: Jugo Hit de Lulo -->
+          <!-- Bebida 8 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1575,7 +1575,7 @@
             </div>
           </div>
 
-          <!-- Bebida 9: Águila Light -->
+          <!-- Bebida 9 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1595,7 +1595,7 @@
             </div>
           </div>
 
-          <!-- Bebida 10: Agua Pool sin Gas -->
+          <!-- Bebida 10 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1615,7 +1615,7 @@
             </div>
           </div>
 
-          <!-- Bebida 11: Coca-Cola Familiar -->
+          <!-- Bebida 11 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
