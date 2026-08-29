@@ -473,7 +473,7 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
@@ -526,11 +526,11 @@
     animation: fadeInTab 0.4s ease forwards;
   }
 
-  /* SEPARACIÓN EXACTA Y LIMPIA PARA CADA PESTAÑA (EVITA QUE CHOQUEN CON LA CAJA) */
-  .tab-pane .menu-grid,
-  .tab-pane .combos-tab-grid,
-  .tab-pane .carousel-container {
-    margin-top: 25px !important;
+  /* SEPARACIÓN EXACTA Y CORREGIDA PARA QUE NINGUNA PESTAÑA TOQUE LA CAJA */
+  #tab-platos .menu-grid,
+  #tab-combos .combos-tab-grid,
+  #tab-bebidas .carousel-container {
+    margin-top: 35px !important;
   }
 
   @keyframes fadeInTab {
