@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="TacoBons - La verdadera comida mexicana en La Tebaida, Quindío. Tacos, Quesadillas, Burritos y Nachos con domicilio.">
 <title>TacoBons 🌮 | Comida Mexicana en La Tebaida - Domicilios</title>
 
@@ -44,6 +44,12 @@
     --shadow-glow: 0 0 35px rgba(52, 215, 7, 0.3);
   }
 
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -53,7 +59,6 @@
     background-color: var(--bg-dark);
     color: var(--text);
     line-height: 1.6;
-    overflow-x: hidden;
     padding-top: 60px;
   }
 
@@ -79,6 +84,7 @@
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background: rgba(18, 13, 10, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -171,9 +177,9 @@
     padding: 60px 24px 80px 24px;
     overflow: hidden;
     background:
-      radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.14) 0%, transparent 45%), /* Rosa vibrante arriba izq */
-      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 45%),   /* Verde brillante abajo der */
-      radial-gradient(circle at 70% 20%, rgba(253, 214, 3, 0.10) 0%, transparent 40%),  /* Amarillo cálido centro-der */
+      radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 45%),
+      radial-gradient(circle at 70% 20%, rgba(253, 214, 3, 0.10) 0%, transparent 40%),
       linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
   }
 
@@ -435,11 +441,13 @@
   section {
     padding: 100px 24px;
     position: relative;
+    width: 100%;
   }
 
   .section-container {
     max-width: 1280px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .section-header {
