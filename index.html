@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* ========== RESET & VARIABLES ========== */
+  /* ========== RESET & VARIABLES (ACTUALIZADAS CON LOS TONOS DE LA LOGO) ========== */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -28,15 +28,17 @@
     --bg-card-hover: #22150F;
     --orange: #FF5722;
     --orange-dark: #E64A19;
-    --green: #7CB342;
-    --green-dark: #689F38;
+    --green: #4CAF50;
+    --green-dark: #388E3C;
     --yellow: #FFC107;
     --yellow-dark: #FFA000;
+    --mexican-pink: #E91E63;
+    --mexican-pink-dark: #C2185B;
     --cream: #FFF8E7;
     --text: #F5E6D3;
     --text-muted: #B8A89A;
-    --border: rgba(255, 87, 34, 0.15);
-    --shadow-glow: 0 0 30px rgba(255, 87, 34, 0.35);
+    --border: rgba(233, 30, 99, 0.2);
+    --shadow-glow: 0 0 30px rgba(233, 30, 99, 0.3);
   }
 
   html {
@@ -66,42 +68,6 @@
   img {
     max-width: 100%;
     display: block;
-  }
-
-  /* ========== BANNER AGENCIA ========== */
-  .agency-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #FF5722 0%, #FFC107 50%, #7CB342 100%);
-    color: #120D0A;
-    text-align: center;
-    padding: 10px 16px;
-    font-weight: 700;
-    font-size: 13px;
-    z-index: 10000;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .agency-banner a {
-    color: #120D0A;
-    text-decoration: underline;
-    font-weight: 800;
-  }
-
-  .agency-banner i {
-    animation: sparkle 1.5s ease-in-out infinite;
-  }
-
-  @keyframes sparkle {
-    0%, 100% { transform: scale(1) rotate(0); }
-    50% { transform: scale(1.3) rotate(15deg); }
   }
 
   /* ========== HEADER / NAVBAR ========== */
@@ -144,7 +110,7 @@
   }
 
   .nav-links a:hover {
-    color: var(--orange);
+    color: var(--mexican-pink);
   }
 
   .nav-links a::after {
@@ -154,7 +120,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--orange);
+    background: var(--mexican-pink);
     transition: width 0.3s ease;
   }
 
@@ -163,7 +129,7 @@
   }
 
   .nav-cta {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    background: linear-gradient(135deg, var(--mexican-pink) 0%, var(--orange) 100%);
     color: white;
     padding: 11px 22px;
     border-radius: 50px;
@@ -173,21 +139,21 @@
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 4px 14px rgba(233, 30, 99, 0.4);
     border: none;
     cursor: pointer;
   }
 
   .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.6);
   }
 
   .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--orange);
+    color: var(--mexican-pink);
     font-size: 24px;
     cursor: pointer;
   }
@@ -201,8 +167,8 @@
     padding: 60px 24px 80px 24px;
     overflow: hidden;
     background:
-      radial-gradient(ellipse at top right, rgba(255, 87, 34, 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(124, 179, 66, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at top right, rgba(233, 30, 99, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(76, 175, 80, 0.12) 0%, transparent 50%),
       linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
   }
 
@@ -246,7 +212,7 @@
     object-fit: contain;
     margin-bottom: 28px;
     display: block;
-    filter: drop-shadow(0 0 14px rgba(255, 87, 34, 0.5));
+    filter: drop-shadow(0 0 16px rgba(233, 30, 99, 0.4));
     transition: transform 0.3s ease;
   }
 
@@ -258,7 +224,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(124, 179, 66, 0.15);
+    background: rgba(76, 175, 80, 0.15);
     color: var(--green);
     padding: 8px 18px;
     border-radius: 50px;
@@ -267,7 +233,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 24px;
-    border: 1px solid rgba(124, 179, 66, 0.3);
+    border: 1px solid rgba(76, 175, 80, 0.3);
   }
 
   .hero-content .badge .dot {
@@ -291,7 +257,7 @@
   }
 
   .hero h1 .highlight {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+    background: linear-gradient(135deg, var(--mexican-pink) 0%, var(--yellow) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -337,14 +303,14 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    background: linear-gradient(135deg, var(--mexican-pink) 0%, var(--mexican-pink-dark) 100%);
     color: white;
-    box-shadow: 0 8px 24px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
   }
 
   .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(255, 87, 34, 0.6);
+    box-shadow: 0 12px 32px rgba(233, 30, 99, 0.6);
   }
 
   .btn-secondary {
@@ -386,7 +352,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 28px;
-    color: var(--orange);
+    color: var(--yellow);
   }
 
   .stat-label {
@@ -418,14 +384,14 @@
     overflow: hidden;
   }
 
-  .protein-card:nth-child(1) { grid-row: span 2; padding: 28px 14px; background: linear-gradient(160deg, rgba(255, 87, 34, 0.15), var(--bg-card)); }
+  .protein-card:nth-child(1) { grid-row: span 2; padding: 28px 14px; background: linear-gradient(160deg, rgba(233, 30, 99, 0.15), var(--bg-card)); }
   .protein-card:nth-child(2) { background: linear-gradient(160deg, rgba(255, 193, 7, 0.15), var(--bg-card)); }
-  .protein-card:nth-child(3) { background: linear-gradient(160deg, rgba(124, 179, 66, 0.15), var(--bg-card)); }
-  .protein-card:nth-child(4) { grid-column: span 2; background: linear-gradient(160deg, rgba(255, 87, 34, 0.1), var(--bg-card)); }
+  .protein-card:nth-child(3) { background: linear-gradient(160deg, rgba(76, 175, 80, 0.15), var(--bg-card)); }
+  .protein-card:nth-child(4) { grid-column: span 2; background: linear-gradient(160deg, rgba(255, 87, 34, 0.15), var(--bg-card)); }
 
   .protein-card:hover {
     transform: translateY(-6px);
-    border-color: var(--orange);
+    border-color: var(--mexican-pink);
     box-shadow: var(--shadow-glow);
   }
 
@@ -466,8 +432,8 @@
 
   .section-tag {
     display: inline-block;
-    background: rgba(255, 87, 34, 0.12);
-    color: var(--orange);
+    background: rgba(233, 30, 99, 0.12);
+    color: var(--mexican-pink);
     padding: 6px 16px;
     border-radius: 50px;
     font-size: 12px;
@@ -475,7 +441,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 16px;
-    border: 1px solid rgba(255, 87, 34, 0.3);
+    border: 1px solid rgba(233, 30, 99, 0.3);
   }
 
   .section-title {
@@ -485,7 +451,7 @@
   }
 
   .section-title .highlight {
-    background: linear-gradient(135deg, var(--orange), var(--yellow));
+    background: linear-gradient(135deg, var(--mexican-pink), var(--yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -522,8 +488,8 @@
 
   .menu-card:hover {
     transform: translateY(-10px);
-    border-color: var(--orange);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(255, 87, 34, 0.3);
+    border-color: var(--mexican-pink);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(233, 30, 99, 0.3);
   }
 
   .menu-card-img {
@@ -553,7 +519,7 @@
     position: absolute;
     top: 14px;
     right: 14px;
-    background: var(--orange);
+    background: var(--mexican-pink);
     color: white;
     padding: 6px 14px;
     border-radius: 50px;
@@ -606,8 +572,8 @@
   }
 
   .btn-card {
-    background: rgba(255, 87, 34, 0.12);
-    color: var(--orange);
+    background: rgba(233, 30, 99, 0.12);
+    color: var(--mexican-pink);
     padding: 10px 18px;
     border-radius: 50px;
     font-weight: 700;
@@ -615,13 +581,13 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid rgba(255, 87, 34, 0.3);
+    border: 1px solid rgba(233, 30, 99, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
   }
 
   .btn-card:hover {
-    background: var(--orange);
+    background: var(--mexican-pink);
     color: white;
   }
 
@@ -633,12 +599,12 @@
   }
 
   .promo-banner {
-    background: linear-gradient(135deg, #FF5722 0%, #D84315 50%, #BF360C 100%);
+    background: linear-gradient(135deg, var(--mexican-pink) 0%, #C2185B 50%, #880E4F 100%);
     border-radius: 28px;
     padding: 60px 50px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 25px 60px rgba(255, 87, 34, 0.3);
+    box-shadow: 0 25px 60px rgba(233, 30, 99, 0.3);
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 40px;
@@ -794,14 +760,14 @@
   }
 
   .info-card:hover {
-    border-color: var(--orange);
+    border-color: var(--mexican-pink);
     transform: translateX(4px);
   }
 
   .info-icon {
     width: 52px;
     height: 52px;
-    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    background: linear-gradient(135deg, var(--mexican-pink), var(--mexican-pink-dark));
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -824,7 +790,7 @@
   }
 
   .info-card a {
-    color: var(--orange);
+    color: var(--mexican-pink);
     font-weight: 600;
   }
 
@@ -851,7 +817,7 @@
   /* ========== CTA FINAL ========== */
   .cta-final {
     background:
-      radial-gradient(ellipse at center, rgba(255, 87, 34, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at center, rgba(233, 30, 99, 0.18) 0%, transparent 60%),
       var(--bg-dark);
     text-align: center;
     padding: 110px 24px;
@@ -867,7 +833,7 @@
   }
 
   .cta-final h2 .highlight {
-    background: linear-gradient(135deg, var(--orange), var(--yellow));
+    background: linear-gradient(135deg, var(--mexican-pink), var(--yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -939,22 +905,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--orange);
+    color: var(--mexican-pink);
     font-size: 18px;
     transition: all 0.3s ease;
   }
 
   .footer-social a:hover {
-    background: var(--orange);
+    background: var(--mexican-pink);
     color: white;
     transform: translateY(-3px);
-    border-color: var(--orange);
+    border-color: var(--mexican-pink);
   }
 
   .footer-logo {
     font-family: 'Bungee', cursive;
     font-size: 24px;
-    background: linear-gradient(135deg, var(--orange), var(--yellow));
+    background: linear-gradient(135deg, var(--mexican-pink), var(--yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1014,7 +980,6 @@
   /* ========== RESPONSIVE ========== */
   @media (max-width: 968px) {
     body { padding-top: 56px; }
-    .agency-banner { display: none; }
     .navbar { padding: 8px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
@@ -1048,8 +1013,8 @@
 <body>
 
 <!-- ========== NAVBAR ========== -->
-<nav class="navbar fixed top-0 left-0 w-full z-50">
-  <div class="navbar-inner justify-end py-2">
+<nav class="navbar">
+  <div class="navbar-inner">
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#menu">Menú Mexicano</a></li>
@@ -1311,9 +1276,9 @@
   <p class="footer-tag">Comida Mexicana Auténtica en La Tebaida, Quindío 🌮</p>
   <div class="footer-divider"></div>
   <p class="footer-dev">
-    Diseñado con <strong style="color: var(--orange);">🔥 potencia</strong> por <a href="https://wa.me/5511953285680" target="_blank" rel="noopener" style="color: var(--yellow); font-weight: 700;">Angélica Digital</a>
+    Diseñado con <strong style="color: var(--mexican-pink);">🔥 potencia</strong> por <a href="https://wa.me/5511953285680" target="_blank" rel="noopener" style="color: var(--yellow); font-weight: 700;">Angélica Digital</a>
   </p>
-  <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2025 TacoBons. Todos los derechos reservados.</p>
+  <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
 </footer>
 
 <!-- ========== FLOATING WHATSAPP ========== -->
