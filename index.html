@@ -345,7 +345,6 @@
     transform: translateY(-3px);
   }
 
-  /* BOTÓN WHATSAPP CON LOS MISMOS ESTILOS Y COLORES QUE EL BOTÓN DE MENÚ DIGITAL */
   .btn-whatsapp {
     background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
     color: #120D0A;
@@ -1015,8 +1014,8 @@
   }
 
   .btn-giant {
-    background: #25D366;
-    color: white;
+    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    color: #120D0A;
     padding: 22px 50px;
     border-radius: 60px;
     font-weight: 800;
@@ -1029,18 +1028,18 @@
     border: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     animation: pulse-giant 2.5s ease-in-out infinite;
-    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 12px 30px rgba(52, 215, 7, 0.4);
   }
 
   @keyframes pulse-giant {
-    0%, 100% { box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4); transform: scale(1); }
-    50% { box-shadow: 0 12px 50px rgba(37, 211, 102, 0.7); transform: scale(1.04); }
+    0%, 100% { box-shadow: 0 12px 30px rgba(52, 215, 7, 0.4); transform: scale(1); }
+    50% { box-shadow: 0 12px 50px rgba(52, 215, 7, 0.7); transform: scale(1.04); }
   }
 
   .btn-giant:hover {
-    background: #1FB957;
+    background: linear-gradient(135deg, #2ebc05, var(--logo-yellow));
     transform: scale(1.08) !important;
-    box-shadow: 0 16px 40px rgba(37, 211, 102, 0.6);
+    box-shadow: 0 16px 40px rgba(52, 215, 7, 0.6);
   }
 
   .btn-giant i {
@@ -1113,13 +1112,13 @@
     color: var(--logo-yellow);
   }
 
-  /* ========== FLOATING WHATSAPP ========== */
+  /* ========== BOTÓN FLOTANTE DE WHATSAPP ACTUALIZADO (MISMO DEGRADADO Y TEXTO NEGRO) ========== */
   .floating-wa {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background: #25D366;
-    color: white;
+    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    color: #120D0A;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1127,19 +1126,19 @@
     align-items: center;
     justify-content: center;
     font-size: 28px;
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 8px 24px rgba(52, 215, 7, 0.5);
     z-index: 9998;
     transition: all 0.3s ease;
     animation: pulse-float 2s ease-in-out infinite;
   }
 
   @keyframes pulse-float {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(52, 215, 7, 0.5); }
+    50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(52, 215, 7, 0.8); }
   }
 
   .floating-wa:hover {
-    background: #1FB957;
+    background: linear-gradient(135deg, #2ebc05, var(--logo-yellow));
     transform: scale(1.15);
   }
 
@@ -1207,7 +1206,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO (CON BOTONES UNIFICADOS Y HALOS ACTUALIZADOS) ========== -->
+<!-- ========== HERO ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1775,9 +1774,9 @@
   <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
 </footer>
 
-<!-- ========== FLOATING WHATSAPP ========== -->
+<!-- ========== FLOATING WHATSAPP FLOTANTE CON EL MISMO ESTILO Y COLOR ========== -->
 <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20hacer%20un%20pedido%20%F0%9F%9B%97%F0%9F%8C%AE" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
+  <i class="fab fa-whatsapp" style="color: #120D0A;"></i>
 </a>
 
 <script>
