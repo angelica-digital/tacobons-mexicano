@@ -162,7 +162,7 @@
     cursor: pointer;
   }
 
-  /* ========== HERO ========== */
+  /* ========== HERO CON HALOS DE LUZ TRASLÚCIDOS DE LA MARCA ========== */
   .hero {
     position: relative;
     min-height: 92vh;
@@ -171,8 +171,9 @@
     padding: 60px 24px 80px 24px;
     overflow: hidden;
     background:
-      radial-gradient(ellipse at top right, rgba(52, 215, 7, 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(253, 214, 3, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 10% 20%, rgba(52, 215, 7, 0.14) 0%, transparent 45%),   /* Verde brillante arriba izq */
+      radial-gradient(circle at 90% 80%, rgba(253, 12, 121, 0.12) 0%, transparent 45%), /* Rosa vibrante abajo der */
+      radial-gradient(circle at 70% 20%, rgba(253, 214, 3, 0.10) 0%, transparent 40%),  /* Amarillo cálido centro-der */
       linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
   }
 
@@ -480,12 +481,12 @@
     margin: 0 auto;
   }
 
-  /* ========== SECCIÓN MENÚ CON FONDOS DE HALOS INDIRECTOS (ARRIBA IZQ Y ABAJO DER) ========== */
+  /* ========== SECCIÓN MENÚ CON FONDOS DE HALOS INDIRECTOS ========== */
   .menu-section {
     background: 
-      radial-gradient(circle at 10% 20%, rgba(253, 139, 47, 0.15) 0%, transparent 40%), /* Naranja cálido arriba izq */
-      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 40%), /* Verde sutil abajo der */
-      linear-gradient(135deg, #1A0A10 0%, #120D0A 50%, #0A140B 100%); /* Fondo oscuro general */
+      radial-gradient(circle at 10% 20%, rgba(253, 139, 47, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 40%),
+      linear-gradient(135deg, #1A0A10 0%, #120D0A 50%, #0A140B 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
@@ -1196,7 +1197,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO ========== -->
+<!-- ========== HERO (CON HALOS DE LUZ DE LA MARCA) ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
