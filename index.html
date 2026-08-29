@@ -522,16 +522,16 @@
 
   .menu-card-badge {
     position: absolute;
-    top: 14px;
+    bottom: 12px;
     right: 14px;
     background: var(--logo-pink);
     color: white;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     z-index: 2;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
 
   .menu-card-content {
@@ -542,10 +542,10 @@
   }
 
   .menu-card h3 {
-    font-size: 19px; /* Título ajustado para que no sea muy grande */
+    font-size: 17px;
     color: var(--cream);
     margin-bottom: 12px;
-    min-height: 48px;
+    min-height: 44px;
     display: flex;
     align-items: center;
   }
@@ -655,16 +655,16 @@
 
   .promo-card-badge {
     position: absolute;
-    top: 14px;
+    bottom: 12px;
     right: 14px;
     background: var(--logo-yellow);
     color: var(--bg-dark);
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     z-index: 2;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
 
   .promo-card-content {
@@ -676,7 +676,7 @@
   }
 
   .promo-card-custom h3 {
-    font-size: 22px;
+    font-size: 21px;
     color: var(--cream);
     margin-bottom: 12px;
   }
@@ -1183,7 +1183,7 @@
   </div>
 </section>
 
-<!-- ========== PROMOS & COMBOS (BORDAS ROSAS Y PROPORCIÓN 1200x900) ========== -->
+<!-- ========== PROMOS & COMBOS ========== -->
 <section class="promo-section" id="combos">
   <div class="section-container">
     <div class="section-header">
@@ -1369,7 +1369,7 @@
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-    observer.observe(el);
+    observer.observe(el, ...[]);
   });
 
   // ===== Navbar shrink on scroll =====
