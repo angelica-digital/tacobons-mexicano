@@ -35,13 +35,13 @@
     --logo-pink: #FD0C79;
     --logo-pink-dark: #C2185B;
     --logo-teal: #02A69C;
-    --logo-orange: #C65506;
+    --logo-orange: #FD8B2F; /* Naranja de referencia */
 
     --cream: #FFF8E7;
     --text: #F5E6D3;
     --text-muted: #B8A89A;
     --border: rgba(52, 215, 7, 0.25);
-    --shadow-glow: 0 0 35px rgba(52, 215, 7, 0.3);
+    --shadow-glow: 0 0 35px rgba(253, 12, 121, 0.3);
   }
 
   html, body {
@@ -120,7 +120,7 @@
   }
 
   .nav-links a:hover {
-    color: var(--logo-green);
+    color: var(--logo-pink);
   }
 
   .nav-links a::after {
@@ -130,7 +130,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--logo-green);
+    background: var(--logo-pink);
     transition: width 0.3s ease;
   }
 
@@ -139,7 +139,7 @@
   }
 
   .nav-cta {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     padding: 11px 22px;
     border-radius: 50px;
@@ -149,21 +149,21 @@
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 4px 14px rgba(253, 12, 121, 0.4);
     border: none;
     cursor: pointer;
   }
 
   .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 6px 20px rgba(253, 12, 121, 0.6);
   }
 
   .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-size: 24px;
     cursor: pointer;
   }
@@ -178,7 +178,7 @@
     overflow: hidden;
     background:
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.14) 0%, transparent 45%),
-      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(253, 139, 47, 0.12) 0%, transparent 45%),
       radial-gradient(circle at 70% 20%, rgba(253, 214, 3, 0.10) 0%, transparent 40%),
       linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
   }
@@ -223,7 +223,7 @@
     object-fit: contain;
     margin-bottom: 28px;
     display: block;
-    filter: drop-shadow(0 0 18px rgba(52, 215, 7, 0.4));
+    filter: drop-shadow(0 0 18px rgba(253, 12, 121, 0.4));
     transition: transform 0.3s ease;
   }
 
@@ -235,8 +235,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(52, 215, 7, 0.15);
-    color: var(--logo-green);
+    background: rgba(253, 12, 121, 0.15);
+    color: var(--logo-pink);
     padding: 8px 18px;
     border-radius: 50px;
     font-weight: 700;
@@ -244,13 +244,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 24px;
-    border: 1px solid rgba(52, 215, 7, 0.3);
+    border: 1px solid rgba(253, 12, 121, 0.3);
   }
 
   .hero-content .badge .dot {
     width: 8px;
     height: 8px;
-    background: var(--logo-green);
+    background: var(--logo-pink);
     border-radius: 50%;
     animation: pulse-dot 1.5s ease-in-out infinite;
   }
@@ -268,7 +268,7 @@
   }
 
   .hero h1 .highlight {
-    background: linear-gradient(90deg, var(--logo-green) 0%, var(--logo-yellow) 35%, var(--logo-pink) 50%, var(--logo-yellow) 65%, var(--logo-green) 100%);
+    background: linear-gradient(90deg, var(--logo-orange) 0%, var(--logo-yellow) 35%, var(--logo-pink) 50%, var(--logo-yellow) 65%, var(--logo-orange) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -321,16 +321,17 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
+  /* BOTÓN 1: VER MENÚ DIGITAL CON LAS NUEVAS CORES NARANJA Y ROSA + TEXTO NEGRO */
   .btn-primary {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     font-weight: 800;
-    box-shadow: 0 8px 24px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 8px 24px rgba(253, 12, 121, 0.4);
   }
 
   .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 12px 32px rgba(253, 12, 121, 0.6);
   }
 
   .btn-secondary {
@@ -345,17 +346,17 @@
     transform: translateY(-3px);
   }
 
+  /* BOTÓN 2: PEDIR POR WHATSAPP CON LAS MISMAS CORES NARANJA Y ROSA + TEXTO NEGRO */
   .btn-whatsapp {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     font-weight: 800;
-    box-shadow: 0 8px 24px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 8px 24px rgba(253, 12, 121, 0.4);
   }
 
   .btn-whatsapp:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(52, 215, 7, 0.6);
-    background: linear-gradient(135deg, #2ebc05, var(--logo-yellow));
+    box-shadow: 0 12px 32px rgba(253, 12, 121, 0.6);
   }
 
   .hero-stats {
@@ -458,8 +459,8 @@
 
   .section-tag {
     display: inline-block;
-    background: rgba(52, 215, 7, 0.12);
-    color: var(--logo-green);
+    background: rgba(253, 12, 121, 0.12);
+    color: var(--logo-pink);
     padding: 6px 16px;
     border-radius: 50px;
     font-size: 12px;
@@ -467,7 +468,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 16px;
-    border: 1px solid rgba(52, 215, 7, 0.3);
+    border: 1px solid rgba(253, 12, 121, 0.3);
   }
 
   .section-title {
@@ -477,7 +478,7 @@
   }
 
   .section-title .highlight {
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow), var(--logo-pink));
+    background: linear-gradient(135deg, var(--logo-orange), var(--logo-yellow), var(--logo-pink));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -494,13 +495,13 @@
   .menu-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 139, 47, 0.15) 0%, transparent 40%),
-      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(253, 12, 121, 0.12) 0%, transparent 40%),
       linear-gradient(135deg, #1A0A10 0%, #120D0A 50%, #0A140B 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - BOTÓN ACTIVO CON LAS NUEVAS CORES NARANJA Y ROSA ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
@@ -543,10 +544,11 @@
     background: rgba(255, 255, 255, 0.05);
   }
 
+  /* BOTÓN 3: PESTAÑA ACTIVA CON NARANJA Y ROSA + TEXTO NEGRO */
   .menu-tab-btn.active {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
-    box-shadow: 0 4px 16px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 4px 16px rgba(253, 12, 121, 0.4);
   }
 
   .tab-pane {
@@ -816,7 +818,7 @@
   }
 
   .btn-promo-card {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     padding: 12px 24px;
     border-radius: 50px;
@@ -828,7 +830,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
     border: none;
-    box-shadow: 0 4px 15px rgba(52, 215, 7, 0.3);
+    box-shadow: 0 4px 15px rgba(253, 12, 121, 0.3);
   }
 
   .btn-promo-card:hover {
@@ -874,7 +876,7 @@
     background: rgba(18, 13, 10, 0.95);
     border: 1px solid var(--border);
     border-radius: 50%;
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -886,7 +888,7 @@
   }
 
   .carousel-nav-btn:hover {
-    background: var(--logo-green);
+    background: var(--logo-pink);
     color: #120D0A;
     transform: translateY(-50%) scale(1.1);
   }
@@ -925,14 +927,14 @@
   }
 
   .info-card:hover {
-    border-color: var(--logo-green);
+    border-color: var(--logo-pink);
     transform: translateX(4px);
   }
 
   .info-icon {
     width: 52px;
     height: 52px;
-    background: linear-gradient(135deg, var(--logo-pink), var(--logo-green));
+    background: linear-gradient(135deg, var(--logo-pink), var(--logo-orange));
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -955,7 +957,7 @@
   }
 
   .info-card a {
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-weight: 600;
   }
 
@@ -982,7 +984,7 @@
   /* ========== CTA FINAL ========== */
   .cta-final {
     background:
-      radial-gradient(ellipse at center, rgba(52, 215, 7, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at center, rgba(253, 12, 121, 0.15) 0%, transparent 60%),
       var(--bg-dark);
     text-align: center;
     padding: 110px 24px;
@@ -998,7 +1000,7 @@
   }
 
   .cta-final h2 .highlight {
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow), var(--logo-pink));
+    background: linear-gradient(135deg, var(--logo-orange), var(--logo-yellow), var(--logo-pink));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1013,8 +1015,9 @@
     margin-right: auto;
   }
 
+  /* BOTÓN 4: BOTÓN GIGANTE DEL RODAJE CON NARANJA Y ROSA + TEXTO NEGRO */
   .btn-giant {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     padding: 22px 50px;
     border-radius: 60px;
@@ -1028,18 +1031,18 @@
     border: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     animation: pulse-giant 2.5s ease-in-out infinite;
-    box-shadow: 0 12px 30px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 12px 30px rgba(253, 12, 121, 0.4);
   }
 
   @keyframes pulse-giant {
-    0%, 100% { box-shadow: 0 12px 30px rgba(52, 215, 7, 0.4); transform: scale(1); }
-    50% { box-shadow: 0 12px 50px rgba(52, 215, 7, 0.7); transform: scale(1.04); }
+    0%, 100% { box-shadow: 0 12px 30px rgba(253, 12, 121, 0.4); transform: scale(1); }
+    50% { box-shadow: 0 12px 50px rgba(253, 12, 121, 0.7); transform: scale(1.04); }
   }
 
   .btn-giant:hover {
-    background: linear-gradient(135deg, #2ebc05, var(--logo-yellow));
+    background: linear-gradient(135deg, #e8771c, #d60867);
     transform: scale(1.08) !important;
-    box-shadow: 0 16px 40px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 16px 40px rgba(253, 12, 121, 0.6);
   }
 
   .btn-giant i {
@@ -1085,7 +1088,7 @@
   .footer-logo {
     font-family: 'Bungee', cursive;
     font-size: 24px;
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow), var(--logo-pink));
+    background: linear-gradient(135deg, var(--logo-orange), var(--logo-yellow), var(--logo-pink));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1109,15 +1112,15 @@
   }
 
   .footer-dev strong {
-    color: var(--logo-yellow);
+    color: var(--logo-pink);
   }
 
-  /* ========== BOTÓN FLOTANTE DE WHATSAPP ACTUALIZADO (MISMO DEGRADADO Y TEXTO NEGRO) ========== */
+  /* BOTÓN 5: WHATSAPP FLOTANTE CON NARANJA Y ROSA + TEXTO NEGRO */
   .floating-wa {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-orange) 0%, var(--logo-pink) 100%);
     color: #120D0A;
     width: 60px;
     height: 60px;
@@ -1126,19 +1129,19 @@
     align-items: center;
     justify-content: center;
     font-size: 28px;
-    box-shadow: 0 8px 24px rgba(52, 215, 7, 0.5);
+    box-shadow: 0 8px 24px rgba(253, 12, 121, 0.5);
     z-index: 9998;
     transition: all 0.3s ease;
     animation: pulse-float 2s ease-in-out infinite;
   }
 
   @keyframes pulse-float {
-    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(52, 215, 7, 0.5); }
-    50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(52, 215, 7, 0.8); }
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(253, 12, 121, 0.5); }
+    50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(253, 12, 121, 0.8); }
   }
 
   .floating-wa:hover {
-    background: linear-gradient(135deg, #2ebc05, var(--logo-yellow));
+    background: linear-gradient(135deg, #e8771c, #d60867);
     transform: scale(1.15);
   }
 
@@ -1774,7 +1777,7 @@
   <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
 </footer>
 
-<!-- ========== FLOATING WHATSAPP FLOTANTE CON EL MISMO ESTILO Y COLOR ========== -->
+<!-- ========== WHATSAPP FLOTANTE CON EL NUEVO ESTILO ========== -->
 <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20hacer%20un%20pedido%20%F0%9F%9B%97%F0%9F%8C%AE" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
   <i class="fab fa-whatsapp" style="color: #120D0A;"></i>
 </a>
