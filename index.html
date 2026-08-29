@@ -253,13 +253,15 @@
     50% { opacity: 0.5; transform: scale(1.3); }
   }
 
+  /* TÍTULO PRINCIPAL LIGERAMENTE MÁS PEQUEÑO Y ELEGANTE */
   .hero h1 {
-    font-size: clamp(38px, 5.5vw, 68px);
+    font-size: clamp(32px, 4.2vw, 54px);
     color: var(--cream);
     margin-bottom: 20px;
-    line-height: 1.05;
+    line-height: 1.1;
   }
 
+  /* DEGRADADO INTEGRANDO VERDE, AMARILLO Y ROSA VIBRANTE */
   .hero h1 .highlight {
     background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 50%, var(--logo-pink) 100%);
     -webkit-background-clip: text;
@@ -279,7 +281,7 @@
   }
 
   .hero p.subtitle {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-muted);
     margin-bottom: 32px;
     max-width: 540px;
@@ -367,7 +369,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* ========== CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO ROSA Y SOMBRA ROSA ========== */
+  /* ========== CONTENEDOR DE LA IMAGEN CON BORDE Y SOMBRA ROSA ========== */
   .hero-image-wrapper {
     position: relative;
     max-width: 420px;
@@ -375,11 +377,9 @@
     border-radius: 28px;
     overflow: visible;
     aspect-ratio: 4 / 5;
-    /* Borde sutil traslúcido rosa neón */
     border: 2px solid rgba(253, 12, 121, 0.45);
     background: rgba(26, 16, 12, 0.6);
     backdrop-filter: blur(8px);
-    /* Sombra de fondo / brillo neón en tono rosa */
     box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 35px rgba(253, 12, 121, 0.35);
     transition: all 0.4s ease;
   }
@@ -398,7 +398,7 @@
     border-radius: 26px;
   }
 
-  /* Emojis flotantes decorativos alrededor de la tarjeta */
+  /* Emojis flotantes decorativos */
   .floating-emoji {
     position: absolute;
     font-size: 32px;
@@ -1196,7 +1196,9 @@
         <span class="dot"></span> ¡Abierto ahora en La Tebaida!
       </div>
       <h1>
-        La Verdadera <span class="highlight">Comida Mexicana</span> Llegó a La Tebaida <span class="emoji-fade">🌮🔥</span>
+        La Verdadera <br>
+        <span class="highlight">Comida Mexicana</span> <br>
+        Llegó a La Tebaida <span class="emoji-fade">🌮🔥</span>
       </h1>
       <p class="subtitle">
         Tacos, Quesadillas, Burritos y Nachos cargados de queso fundido. Pide a domicilio o visítanos y disfruta del auténtico sabor mexicano en el Quindío.
