@@ -480,11 +480,14 @@
     margin: 0 auto;
   }
 
-  /* ========== SECCIÓN MENÚ CON FONDO DEGRADADO MUY TRANSPARENTE Y SUTIL ========== */
+  /* ========== SECCIÓN MENÚ CON FONDOS DE HALOS INDIRECTOS (ARRIBA IZQ Y ABAJO DER) ========== */
   .menu-section {
-    background: linear-gradient(135deg, rgba(253, 214, 3, 0.12) 0%, rgba(253, 139, 47, 0.15) 50%, rgba(253, 64, 91, 0.12) 100%), var(--bg-dark);
-    border-top: 1px solid rgba(253, 139, 47, 0.2);
-    border-bottom: 1px solid rgba(253, 64, 91, 0.2);
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(253, 139, 47, 0.15) 0%, transparent 40%), /* Naranja cálido arriba izq */
+      radial-gradient(circle at 90% 80%, rgba(52, 215, 7, 0.12) 0%, transparent 40%), /* Verde sutil abajo der */
+      linear-gradient(135deg, #1A0A10 0%, #120D0A 50%, #0A140B 100%); /* Fondo oscuro general */
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 
   /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
@@ -1243,7 +1246,7 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN MENÚ CON FONDO DEGRADADO MUY TRANSPARENTE Y SUTIL ========== -->
+<!-- ========== SECCIÓN MENÚ CON FONDOS DE HALOS INDIRECTOS ========== -->
 <section class="menu-section" id="menu">
   <div class="section-container">
     <div class="section-header">
