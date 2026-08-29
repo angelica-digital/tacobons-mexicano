@@ -6,10 +6,12 @@
 <meta name="description" content="TacoBons - La verdadera comida mexicana en La Tebaida, Quindío. Tacos, Quesadillas, Burritos y Nachos con domicilio.">
 <title>TacoBons 🌮 | Comida Mexicana en La Tebaida - Domicilios</title>
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Bungee&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -529,7 +531,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ========== CARDS DE PLATOS ========== */
+  /* ========== CARDS DE PLATOS & PROMOS ========== */
   .menu-section {
     background: var(--bg-card);
     border-top: 1px solid var(--border);
@@ -661,7 +663,7 @@
     color: white;
   }
 
-  /* ========== CARDS COMBOS CON BORDES ROSAS ========== */
+  /* CARDS COMBOS CON BORDES ROSAS */
   .promo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1117,4 +1119,689 @@
     .nav-cta { padding: 9px 16px; font-size: 13px; }
     .hero-content .hero-logo { height: 72px; margin-bottom: 24px; }
 
-    .
+    .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero-content .hero-logo { margin-left: auto; margin-right: auto; }
+    .hero-content .badge { margin-left: auto; margin-right: auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-visual { margin: 0 auto; }
+
+    .menu-tabs-wrapper { top: 60px; border-radius: 20px; }
+    .menu-tab-btn { font-size: 12px; padding: 8px 16px; }
+
+    .carousel-item { flex: 0 0 78%; min-width: auto; }
+    .carousel-nav-btn { display: none; }
+
+    .location-grid { grid-template-columns: 1fr; }
+    .location-map { min-height: 350px; }
+  }
+
+  @media (max-width: 580px) {
+    section { padding: 70px 20px; }
+    .hero { padding: 40px 20px 60px 20px; min-height: auto; }
+    .hero-visual { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
+    .protein-card:nth-child(1) { grid-row: auto; }
+    .protein-card:nth-child(4) { grid-column: auto; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+    .navbar-inner { padding: 0 16px; }
+    .hero-content .hero-logo { height: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#menu">Menú Digital</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20domicilio%20%F0%9F%9B%97%F0%9F%8C%AE" class="nav-cta" target="_blank" rel="noopener">
+      <i class="fas fa-motorcycle"></i> Pedir Domicilio
+    </a>
+    <button class="menu-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="inicio">
+  <div class="hero-container">
+    <div class="hero-content">
+      <img src="./logo-tacobons.png" alt="TacoBons - Comida Mexicana" class="hero-logo">
+
+      <div class="badge">
+        <span class="dot"></span> ¡Abierto ahora en La Tebaida!
+      </div>
+      <h1>
+        La Verdadera <span class="highlight">Comida Mexicana</span> Llegó a La Tebaida <span class="emoji-fade">🌮🔥</span>
+      </h1>
+      <p class="subtitle">
+        Tacos, Quesadillas, Burritos y Nachos cargados de queso fundido. Pide a domicilio o visítanos y disfruta del auténtico sabor mexicano en el Quindío.
+      </p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">
+          <i class="fas fa-utensils"></i> Ver Menú Digital
+        </a>
+        <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20ver%20el%20men%C3%BA%20completo%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Proteínas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">27K</span>
+          <span class="stat-label">Desde $</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">⭐ 4.9</span>
+          <span class="stat-label">Calidad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="protein-card">
+        <span class="protein-emoji">🌮</span>
+        <h4>Tacos</h4>
+        <p>3 Proteínas</p>
+      </div>
+      <div class="protein-card">
+        <span class="protein-emoji">🧀</span>
+        <h4>Quesadillas</h4>
+        <p>Fundidas</p>
+      </div>
+      <div class="protein-card">
+        <span class="protein-emoji">🌯</span>
+        <h4>Burritos</h4>
+        <p>Gigantes</p>
+      </div>
+      <div class="protein-card">
+        <span class="protein-emoji">🥑</span>
+        <h4>Nachos Explosivos</h4>
+        <p>Con Guacamole</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECCIÓN MENÚ CON ABAS (TABS) ========== -->
+<section class="menu-section" id="menu">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">⭐ Menú & Promociones</span>
+      <h2 class="section-title">Nuestro <span class="highlight">Menú Digital</span> 🌮🔥</h2>
+      <p class="section-subtitle">Selecciona una categoría para explorar nuestros platos tradicionales, combos imperdibles y bebidas.</p>
+    </div>
+
+    <!-- NAVEGACIÓN DE ABAS (TABS) -->
+    <div class="menu-tabs-wrapper">
+      <button class="menu-tab-btn active" onclick="openTab(event, 'tab-platos')">
+        <i class="fas fa-utensils"></i> Platos Mexicanos
+      </button>
+      <button class="menu-tab-btn" onclick="openTab(event, 'tab-combos')">
+        <i class="fas fa-fire"></i> Promo Combos
+      </button>
+      <button class="menu-tab-btn" onclick="openTab(event, 'tab-bebidas')">
+        <i class="fas fa-cocktail"></i> Jugos & Bebidas
+      </button>
+    </div>
+
+    <!-- ABA 1: PLATOS MEXICANOS -->
+    <div id="tab-platos" class="tab-pane active">
+      <div class="menu-grid">
+        <!-- 1. Tacos Mexicanos x 3 -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="tacosmexicanosx3.png" alt="Tacos Mexicanos x 3" class="menu-card-img">
+            <span class="menu-card-badge">TOP</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Tacos Mexicanos x 3</h3>
+            <p>Llévate 3 deliciosos tacos. Elígelos de una sola proteína, mixtos o combinados: Pollo, Al Pastor o Birria. Acompañados de pico de gallo, guacamole y limón.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>3 Tacos + Acompañamientos</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Tacos%20Mexicanos%20x3%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Nachos Mexicanos Gratinados -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="nachosmexicanosgratinados.png" alt="Nachos Mexicanos Gratinados" class="menu-card-img">
+            <span class="menu-card-badge">Especialidad</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Nachos Mexicanos Gratinados</h3>
+            <p>Crujientes nachos de colores con queso gratinado, bien cargados de sabor y con tu proteína a elección: Pollo, Al Pastor o Birria.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Para compartir</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Nachos%20Mexicanos%20Gratinados%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Burro Mexicano -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="burromexicano.png" alt="Burro Mexicano" class="menu-card-img">
+            <span class="menu-card-badge">Best Seller</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Burro Mexicano</h3>
+            <p>Grande, gordito y bien cargado con tortilla de 36 cm. Elige tu proteína favorita (Pollo, Al Pastor o Birria) o combínalas. Acompañado de guacamole y pico de gallo.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Precio por unidad</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Burro%20Mexicano%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Quesadilla Mexicana -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="quesadillamexicana.png" alt="Quesadilla Mexicana" class="menu-card-img">
+            <span class="menu-card-badge">Explosivos</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Quesadilla Mexicana</h3>
+            <p>Tortilla de maíz de 36 cm, bien doradita y rellena con la proteína que quieras (Pollo, Al Pastor o Birria). Acompañada de guacamole y pico de gallo.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Precio por unidad</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20Quesadilla%20Mexicana%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: PROMO COMBOS -->
+    <div id="tab-combos" class="tab-pane">
+      <div class="promo-grid">
+        <!-- PROMO 1: Combo de Burro + Nachos + Gaseosa -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">🔥 COMBO TOP</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Combo de Burro + Nachos + Gaseosa</h3>
+            <p>Burro con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Elige Pollo, Al Pastor o Birria en cada preparación.</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 2: Quesadilla + Nachos + Gaseosa de 400 ml -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa de 400 ml" class="promo-card-img">
+            <span class="promo-card-badge">⭐ ESPECIAL</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Quesadilla + Nachos + Gaseosa</h3>
+            <p>Quesadilla con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Combina Pollo, Al Pastor o Birria como prefieras.</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 3: Tacos x 3 + Nachos + Gaseosa -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">🌮 FAVORITO</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Tacos x 3 + Nachos + Gaseosa</h3>
+            <p>3 tacos (pueden ser mixtos o de tu proteína favorita) + nachos gratinados con proteína a elección + gaseosa de 400 ml. ¡Mucho sabor mexicano!</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: JUGOS & BEBIDAS (CARROUSEL RESPONSIVO COM 11 BEBIDAS) -->
+    <div id="tab-bebidas" class="tab-pane">
+      <div class="carousel-container">
+        <button class="carousel-nav-btn carousel-prev" onclick="scrollCarousel(-1)" aria-label="Anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav-btn carousel-next" onclick="scrollCarousel(1)" aria-label="Siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-track" id="drinksCarousel">
+          <!-- Bebida 1 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="aguilalight.png" alt="Cerveza Águila Light" class="menu-card-img">
+                <span class="menu-card-badge">Cerveza</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Águila Light (473 ml)</h3>
+                <p>Cerveza bien fría en lata de 473 ml, ideal para acompañar tus tacos.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$10.000<small>Lata 473 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light%20%F0%9F%8D%BA" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 2 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="coronita.png" alt="Cerveza Coronita" class="menu-card-img">
+                <span class="menu-card-badge">Mexicana</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Cerveza Coronita</h3>
+                <p>El auténtico toque mexicano para tus platos con limón bien frío.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$10.000<small>Botella 210 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20Coronita%20%F0%9F%8D%BA" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 3 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="cocacola.png" alt="Coca-Cola Personal" class="menu-card-img">
+                <span class="menu-card-badge">Clásica</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Coca-Cola Personal</h3>
+                <p>Refrescante sabor original bien helado para cualquier comida.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$5.000<small>Botella 400 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 4 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="quatro.png" alt="Gaseosa Quatro" class="menu-card-img">
+                <span class="menu-card-badge">Cítrica</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Gaseosa Quatro</h3>
+                <p>Refrescante sabor a toronja, la combinación preferida de los combos.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$5.000<small>Botella 400 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Quatro%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 5 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="sprite.png" alt="Gaseosa Sprite" class="menu-card-img">
+                <span class="menu-card-badge">Lima-Limón</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Gaseosa Sprite</h3>
+                <p>Sabor fresco y burbujeante lima-limón para refrescar tu paladar.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$5.000<small>Botella 400 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Sprite%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 6 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="manzanapostobon.png" alt="Manzana Postobón" class="menu-card-img">
+                <span class="menu-card-badge">Tradicional</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Manzana Postobón</h3>
+                <p>La clásica gaseosa de manzana rosada colombiana bien helada.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$5.000<small>Botella 400 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Manzana%20Postob%C3%B3n%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 7 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="aguamineral.png" alt="Agua Mineral" class="menu-card-img">
+                <span class="menu-card-badge">Pura</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Agua Cristal</h3>
+                <p>Agua pura y fresca sin gas para hidratarte al máximo.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$4.000<small>Botella 600 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Agua%20Cristal%20%F0%9F%92%A7" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 8 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="jugomango.png" alt="Jugo de Mango" class="menu-card-img">
+                <span class="menu-card-badge">100% Natural</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Jugo de Mango</h3>
+                <p>Preparado al instante con pulpa fresca en agua o en leche.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$7.000<small>Vaso 16 oz</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Mango%20%F0%9F%8D%AD" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 9 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="jugofresa.png" alt="Jugo de Fresa" class="menu-card-img">
+                <span class="menu-card-badge">100% Natural</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Jugo de Fresa</h3>
+                <p>Delicioso jugo natural de fresas frescas en agua o en leche.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$7.000<small>Vaso 16 oz</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Fresa%20%F0%9F%8D%93" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 10 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="jugomaracuya.png" alt="Jugo de Maracuyá" class="menu-card-img">
+                <span class="menu-card-badge">Cítrico</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Jugo de Maracuyá</h3>
+                <p>El balance perfecto entre dulce y ácido con fruta 100% fresca.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$7.000<small>Vaso 16 oz</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Maracuy%C3%A1%20%F0%9F%A5%AD" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebida 11 -->
+          <div class="carousel-item">
+            <div class="menu-card">
+              <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+                <img src="limonadanatural.png" alt="Limonada Natural" class="menu-card-img">
+                <span class="menu-card-badge">Favorita</span>
+              </div>
+              <div class="menu-card-content">
+                <h3>Limonada Natural / Cerezada</h3>
+                <p>Exprimida al instante con limón fresco, hielo y toque de la casa.</p>
+                <div class="menu-card-footer">
+                  <div class="price">$7.000<small>Vaso 16 oz</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Limonada%20Natural%20%F0%9F%8D%8B" target="_blank" rel="noopener" class="btn-card">
+                    Pedir <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== UBICACIÓN ========== -->
+<section class="location-section" id="ubicacion">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">📍 Encuéntranos</span>
+      <h2 class="section-title">Ubicación & <span class="highlight">Horarios</span></h2>
+      <p class="section-subtitle">Visítanos o solicita tu domicilio. Llegamos a La Tebaida, El Caimo y alrededores.</p>
+    </div>
+
+    <div class="location-grid">
+      <div class="location-info">
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Nuestra Ubicación</h4>
+            <p>Carrera 10 con Calle 11, Esquina<br>(frente a la Discoteca Nocturna)<br><strong>La Tebaida, Quindío</strong></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Horarios de Atención</h4>
+            <p><strong>Jueves a Domingo</strong><br>🕕 6:00 PM a 11:00 PM<br><em>Domicilios en La Tebaida, El Caimo y alrededores.</em></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h4>Contacto Directo</h4>
+            <p>WhatsApp: <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8C%AE" target="_blank" rel="noopener">+57 314 570 5287</a><br>Instagram: <a href="https://instagram.com/tacobons1" target="_blank" rel="noopener">@tacobons1</a></p>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrera+10+con+Calle+11+La+Tebaida+Quindio" target="_blank" rel="noopener" class="btn btn-primary" style="align-self: flex-start;">
+          <i class="fas fa-directions"></i> Cómo llegar en Google Maps
+        </a>
+      </div>
+
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps?q=Carrera+10+Calle+11+La+Tebaida+Quindio&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación TacoBons La Tebaida"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section class="cta-final">
+  <h2>¿Con antojo del verdadero <span class="highlight">sabor mexicano</span>? 🌮🔥</h2>
+  <p>No esperes más. Haz tu pedido ahora y disfruta de la auténtica comida mexicana directo en tu casa o visítanos en La Tebaida.</p>
+  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Tengo%20antojo%20de%20comida%20mexicana%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-giant">
+    <i class="fab fa-whatsapp"></i> Hacer mi Pedido Ahora
+  </a>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-social">
+    <a href="https://instagram.com/tacobons1" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com/@tacobons1" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20%F0%9F%8C%AE" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/tacobons1" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+  <div class="footer-logo">TACOBONS</div>
+  <p class="footer-tag">Comida Mexicana Auténtica en La Tebaida, Quindío 🌮</p>
+  <div class="footer-divider"></div>
+  <p class="footer-dev">
+    Diseñado con <strong style="color: var(--logo-pink);">🔥 potencia</strong> por <a href="https://wa.me/5511953285680" target="_blank" rel="noopener" style="color: var(--logo-yellow); font-weight: 700;">Angélica Digital</a>
+  </p>
+  <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ========== FLOATING WHATSAPP ========== -->
+<a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20hacer%20un%20pedido%20%F0%9F%9B%97%F0%9F%8C%AE" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  // ===== Função para trocar de abas (Tabs) =====
+  function openTab(evt, tabName) {
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+    const tabBtns = document.querySelectorAll('.menu-tab-btn');
+    tabBtns.forEach(btn => btn.classList.remove('active'));
+
+    const targetPane = document.getElementById(tabName);
+    if (targetPane) {
+      targetPane.classList.add('active');
+    }
+    if (evt && evt.currentTarget) {
+      evt.currentTarget.classList.add('active');
+    }
+  }
+
+  // ===== Função para controlar o carrossel de bebidas =====
+  function scrollCarousel(direction) {
+    const track = document.getElementById('drinksCarousel');
+    if (track) {
+      const scrollAmount = track.clientWidth * 0.75 * direction;
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+
+  // ===== Menu mobile =====
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.style.display === 'flex';
+      navLinks.style.display = isOpen ? 'none' : 'flex';
+      if (!isOpen) {
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '100%';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'rgba(18,13,10,0.98)';
+        navLinks.style.padding = '20px';
+        navLinks.style.borderTop = '1px solid var(--border)';
+      }
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 968) {
+          navLinks.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // ===== Smooth scroll para links internos =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const offsetTop = target.offsetTop - 70;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ===== Animação suave ao rolar a página =====
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-visual .protein-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+  });
+
+  // ===== Navbar reduzida ao rolar =====
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (navbar) {
+      if (window.scrollY > 60) {
+        navbar.style.padding = '6px 0';
+      } else {
+        navbar.style.padding = '10px 0';
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
