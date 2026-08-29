@@ -468,7 +468,7 @@
     margin: 0 auto;
   }
 
-  /* ========== MENÚ ========== */
+  /* ========== MENÚ (PLATOS MEXICANOS) ========== */
   .menu-section {
     background: var(--bg-card);
     border-top: 1px solid var(--border);
@@ -488,6 +488,8 @@
     border: 1px solid var(--border);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-card:hover {
@@ -496,27 +498,26 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(253, 214, 3, 0.3);
   }
 
+  .menu-card-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #0A0604;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .menu-card-img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     transition: transform 0.5s ease;
   }
 
   .menu-card:hover .menu-card-img {
-    transform: scale(1.08);
-  }
-
-  .menu-card-img-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .menu-card-img-wrapper::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 60%, var(--bg-dark) 100%);
+    transform: scale(1.06);
   }
 
   .menu-card-badge {
@@ -535,6 +536,9 @@
 
   .menu-card-content {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   .menu-card h3 {
@@ -550,7 +554,7 @@
     color: var(--text-muted);
     font-size: 14px;
     margin-bottom: 18px;
-    min-height: 60px;
+    flex-grow: 1;
   }
 
   .menu-card-footer {
@@ -612,7 +616,7 @@
     background: var(--bg-card);
     border-radius: 26px;
     overflow: hidden;
-    border: 2px solid var(--logo-pink); /* Bordas en color rosa de la marca */
+    border: 2px solid var(--logo-pink);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     display: flex;
@@ -629,7 +633,7 @@
   .promo-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3; /* Proporción exacta 1200x900 para que se vea completa sin recortes */
+    aspect-ratio: 4 / 3;
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -640,7 +644,7 @@
   .promo-card-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Muestra toda la imagen completa sin recortar ningún detalle */
+    object-fit: contain;
     transition: transform 0.5s ease;
   }
 
@@ -1093,82 +1097,82 @@
   </div>
 </section>
 
-<!-- ========== MENÚ ========== -->
+<!-- ========== MENÚ (PLATOS MEXICANOS) ========== -->
 <section class="menu-section" id="menu">
   <div class="section-container">
     <div class="section-header">
-      <span class="section-tag">⭐ Lo Más Pedido</span>
+      <span class="section-tag">⭐ Platos Mexicanos</span>
       <h2 class="section-title">Menú Mexicano <span class="highlight">Estrella</span> 🌶️</h2>
       <p class="section-subtitle">Cada plato está preparado al momento con ingredientes frescos, salsas de la casa y el auténtico sabor de México.</p>
     </div>
 
     <div class="menu-grid">
-      <!-- Tacos -->
+      <!-- 1. Tacos Mexicanos x 3 -->
       <div class="menu-card">
         <div class="menu-card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80" alt="Tacos Tradicionales" class="menu-card-img">
-          <span class="menu-card-badge">⭐ TOP</span>
+          <img src="tacosex3.png" alt="Tacos Mexicanos x 3" class="menu-card-img">
+          <span class="menu-card-badge">TOP</span>
         </div>
         <div class="menu-card-content">
-          <h3>🌮 Tacos Tradicionales</h3>
-          <p>Servidos con 3 proteínas a elección, cebolla, cilantro, limón y nuestras salsas de la casa picantes.</p>
+          <h3>🌮 Tacos Mexicanos x 3</h3>
+          <p>Llévate 3 deliciosos tacos. Elógelos de una sola proteína, mixtos o combinados: Pollo, Al Pastor o Birria. Acompañados de pico de gallo, guacamole y limón.</p>
           <div class="menu-card-footer">
-            <div class="price">$27.000<small>Precio por orden</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Tacos%20Tradicionales%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+            <div class="price">$27.000<small>3 Tacos + Acompañamientos</small></div>
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Tacos%20Mexicanos%20x3%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
               Pedir <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Burritos -->
+      <!-- 2. Nachos Mexicanos Gratinados -->
       <div class="menu-card">
         <div class="menu-card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" alt="Burritos Gigantes" class="menu-card-img">
-          <span class="menu-card-badge">🔥 Best Seller</span>
+          <img src="nachosgratinados.png" alt="Nachos Mexicanos Gratinados" class="menu-card-img">
+          <span class="menu-card-badge">Especialidad</span>
         </div>
         <div class="menu-card-content">
-          <h3>🌯 Burritos Gigantes</h3>
-          <p>Cargados de carne a elección, queso derretido, maíz dulce y frijol refrito. ¡Una explosión de sabor!</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>Precio por unidad</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Burritos%20Gigantes%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quesadillas -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&q=80" alt="Quesadillas Fundidas" class="menu-card-img">
-          <span class="menu-card-badge">🧀 Especialidad</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>🧀 Quesadillas Fundidas</h3>
-          <p>Nuestra especialidad con queso crujiente por fuera y suave por dentro. Rellenas con tu proteína favorita.</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>Precio por unidad</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Quesadillas%20Fundidas%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nachos -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=600&q=80" alt="Nachos Explosivos" class="menu-card-img">
-          <span class="menu-card-badge">💥 Explosivos</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>🥑 Nachos Explosivos</h3>
-          <p>Totopos crujientes cubiertos de queso fundido, carne a elección, guacamole fresco y crema agria.</p>
+          <h3>🧀 Nachos Mexicanos Gratinados</h3>
+          <p>Crujientes nachos de colores con queso gratinado, bien cargados de sabor y con tu proteína a elección: Pollo, Al Pastor o Birria.</p>
           <div class="menu-card-footer">
             <div class="price">$27.000<small>Para compartir</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Nachos%20Explosivos%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Nachos%20Mexicanos%20Gratinados%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              Pedir <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Burro Mexicano -->
+      <div class="menu-card">
+        <div class="menu-card-img-wrapper">
+          <img src="burromexicano.png" alt="Burro Mexicano" class="menu-card-img">
+          <span class="menu-card-badge">Best Seller</span>
+        </div>
+        <div class="menu-card-content">
+          <h3>🌯 Burro Mexicano</h3>
+          <p>Grande, gordito y bien cargado con tortilla de 36 cm. Elige tu proteína favorita (Pollo, Al Pastor o Birria) o combínalas. Acompañado de guacamole y pico de gallo.</p>
+          <div class="menu-card-footer">
+            <div class="price">$27.000<small>Precio por unidad</small></div>
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Burro%20Mexicano%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              Pedir <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Quesadilla Mexicana -->
+      <div class="menu-card">
+        <div class="menu-card-img-wrapper">
+          <img src="quesadillamexicana.png" alt="Quesadilla Mexicana" class="menu-card-img">
+          <span class="menu-card-badge">Explosivos</span>
+        </div>
+        <div class="menu-card-content">
+          <h3>🌮 Quesadilla Mexicana</h3>
+          <p>Tortilla de maíz de 36 cm, bien doradita y rellena con la proteína que quieras (Pollo, Al Pastor o Birria). Acompañada de guacamole y pico de gallo.</p>
+          <div class="menu-card-footer">
+            <div class="price">$27.000<small>Precio por unidad</small></div>
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20Quesadilla%20Mexicana%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
               Pedir <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -1178,7 +1182,7 @@
   </div>
 </section>
 
-<!-- ========== PROMOS & COMBOS (BORDAS ROSAS Y PROPORCIÓN 1200x900) ========== -->
+<!-- ========== PROMOS & COMBOS ========== -->
 <section class="promo-section" id="combos">
   <div class="section-container">
     <div class="section-header">
