@@ -663,11 +663,11 @@
     color: white;
   }
 
-  /* CARDS COMBOS CON BORDES ROSAS */
+  /* CARDS COMBOS CON BORDES ROSAS (3 COLUMNAS) */
   .promo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
   }
 
   .promo-card-custom {
@@ -725,7 +725,7 @@
   }
 
   .promo-card-content {
-    padding: 28px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -733,15 +733,18 @@
   }
 
   .promo-card-custom h3 {
-    font-size: 21px;
+    font-size: 18px;
     color: var(--cream);
     margin-bottom: 12px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
   }
 
   .promo-card-custom p {
     color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 24px;
+    font-size: 13.5px;
+    margin-bottom: 20px;
     flex-grow: 1;
     line-height: 1.5;
   }
@@ -750,7 +753,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 18px;
     border-top: 1px dashed rgba(253, 12, 121, 0.3);
     gap: 12px;
   }
@@ -758,7 +761,7 @@
   .promo-card-custom .price {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 26px;
+    font-size: 24px;
     color: var(--logo-yellow);
   }
 
@@ -773,7 +776,7 @@
   .btn-promo-card {
     background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
     color: #120D0A;
-    padding: 12px 24px;
+    padding: 11px 20px;
     border-radius: 50px;
     font-weight: 800;
     font-size: 13px;
@@ -1256,39 +1259,57 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS -->
+    <!-- ABA 2: PROMO COMBOS (3 CARDS) -->
     <div id="tab-combos" class="tab-pane">
       <div class="promo-grid">
-        <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+        <!-- PROMO 1: Combo de Burro + Nachos + Gaseosa -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
-            <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
-            <span class="promo-card-badge">🔥 TOP</span>
+            <img src="comboburronachos.png" alt="Combo de Burro + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">🔥 COMBO TOP</span>
           </div>
           <div class="promo-card-content">
-            <h3>Súper Promo TacoBons</h3>
-            <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
+            <h3>Combo de Burro + Nachos + Gaseosa</h3>
+            <p>Burro con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Elige Pollo, Al Pastor o Birria en cada preparación.</p>
             <div class="promo-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+        <!-- PROMO 2: Quesadilla + Nachos + Gaseosa -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
-            <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
-            <span class="promo-card-badge">⭐ NUEVO</span>
+            <img src="comboquesadillanachos.png" alt="Quesadilla + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">⭐ ESPECIAL</span>
           </div>
           <div class="promo-card-content">
-            <h3>Combo Tacos Mixtos</h3>
-            <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, ¡más una refrescante gaseosa Quatro!</p>
+            <h3>Quesadilla + Nachos + Gaseosa</h3>
+            <p>Quesadilla con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Combina Pollo, Al Pastor o Birria como tú prefieras.</p>
             <div class="promo-card-footer">
-              <div class="price">$30.000<small>$38.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 3: Tacos x 3 + Nachos + Gaseosa -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="combotacosnachos.png" alt="Tacos x 3 + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">🌮 FAVORITO</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Tacos x 3 + Nachos + Gaseosa</h3>
+            <p>3 tacos (pueden ser mixtos o de tu proteína favorita) + nachos gratinados con proteína a elección + gaseosa de 400 ml. ¡Mucho sabor mexicano!</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
