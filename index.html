@@ -27,7 +27,7 @@
     --bg-card: #1A100C;
     --bg-card-hover: #22150F;
     
-    /* Colores exactos de la logo */
+    /* Colores exactos de la marca */
     --logo-green: #34D707;
     --logo-green-dark: #28a805;
     --logo-yellow: #FDD603;
@@ -431,7 +431,7 @@
 
   .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .section-tag {
@@ -468,7 +468,70 @@
     margin: 0 auto;
   }
 
-  /* ========== MENÚ (PLATOS MEXICANOS - PROPORCIÓN VERTICAL 1080x1350) ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
+  .menu-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    background: rgba(18, 13, 10, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 14px 10px;
+    border-radius: 60px;
+    border: 1px solid var(--border);
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu-tab-btn:hover {
+    color: var(--cream);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .menu-tab-btn.active {
+    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    color: #120D0A;
+    box-shadow: 0 4px 16px rgba(52, 215, 7, 0.4);
+  }
+
+  .tab-pane {
+    display: none;
+    animation: fadeInTab 0.4s ease forwards;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+
+  @keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ========== CARDS DE PLATOS & PROMOS ========== */
   .menu-section {
     background: var(--bg-card);
     border-top: 1px solid var(--border);
@@ -501,7 +564,7 @@
   .menu-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 5; /* Proporción para imágenes 1080x1350 */
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -520,7 +583,6 @@
     transform: scale(1.04);
   }
 
-  /* BADGE EN LA ESQUINA SUPERIOR DERECHA */
   .menu-card-badge {
     position: absolute;
     top: 14px;
@@ -601,16 +663,10 @@
     color: white;
   }
 
-  /* ========== PROMOS & COMBOS (BORDAS ROSAS Y PROPORCIÓN 1200x900) ========== */
-  .promo-section {
-    background:
-      radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
-      var(--bg-dark);
-  }
-
+  /* CARDS COMBOS CON BORDES ROSAS */
   .promo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 32px;
   }
 
@@ -1000,6 +1056,9 @@
     .hero-stats { justify-content: center; }
     .hero-visual { margin: 0 auto; }
 
+    .menu-tabs-wrapper { top: 60px; border-radius: 20px; }
+    .menu-tab-btn { font-size: 12px; padding: 8px 16px; }
+
     .location-grid { grid-template-columns: 1fr; }
     .location-map { min-height: 350px; }
   }
@@ -1023,8 +1082,7 @@
   <div class="navbar-inner">
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#menu">Menú Mexicano</a></li>
-      <li><a href="#combos">Combos</a></li>
+      <li><a href="#menu">Menú Digital</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
     </ul>
     <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20domicilio%20%F0%9F%9B%97%F0%9F%8C%AE" class="nav-cta" target="_blank" rel="noopener">
@@ -1099,137 +1157,205 @@
   </div>
 </section>
 
-<!-- ========== MENÚ (PLATOS MEXICANOS) ========== -->
+<!-- ========== SECCIÓN MENÚ CON ABAS (TABS) ========== -->
 <section class="menu-section" id="menu">
   <div class="section-container">
     <div class="section-header">
-      <span class="section-tag">⭐ Platos Mexicanos</span>
-      <h2 class="section-title">Menú Mexicano <span class="highlight">Estrella</span> 🌶️</h2>
-      <p class="section-subtitle">Cada plato está preparado al momento con ingredientes frescos, salsas de la casa y el auténtico sabor de México.</p>
+      <span class="section-tag">⭐ Menú & Promociones</span>
+      <h2 class="section-title">Nuestro <span class="highlight">Menú Digital</span> 🌮🔥</h2>
+      <p class="section-subtitle">Selecciona una categoría para explorar nuestros platos tradicionales, combos imperdibles y bebidas.</p>
     </div>
 
-    <div class="menu-grid">
-      <!-- 1. Tacos Mexicanos x 3 -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="tacosmexicanosx3.png" alt="Tacos Mexicanos x 3" class="menu-card-img">
-          <span class="menu-card-badge">TOP</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>Tacos Mexicanos x 3</h3>
-          <p>Llévate 3 deliciosos tacos. Elígelos de una sola proteína, mixtos o combinados: Pollo, Al Pastor o Birria. Acompañados de pico de gallo, guacamole y limón.</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>3 Tacos + Acompañamientos</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Tacos%20Mexicanos%20x3%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. Nachos Mexicanos Gratinados -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="nachosmexicanosgratinados.png" alt="Nachos Mexicanos Gratinados" class="menu-card-img">
-          <span class="menu-card-badge">Especialidad</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>Nachos Mexicanos Gratinados</h3>
-          <p>Crujientes nachos de colores con queso gratinado, bien cargados de sabor y con tu proteína a elección: Pollo, Al Pastor o Birria.</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>Para compartir</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Nachos%20Mexicanos%20Gratinados%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Burro Mexicano -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="burromexicano.png" alt="Burro Mexicano" class="menu-card-img">
-          <span class="menu-card-badge">Best Seller</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>Burro Mexicano</h3>
-          <p>Grande, gordito y bien cargado con tortilla de 36 cm. Elige tu proteína favorita (Pollo, Al Pastor o Birria) o combínalas. Acompañado de guacamole y pico de gallo.</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>Precio por unidad</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Burro%20Mexicano%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Quesadilla Mexicana -->
-      <div class="menu-card">
-        <div class="menu-card-img-wrapper">
-          <img src="quesadillamexicana.png" alt="Quesadilla Mexicana" class="menu-card-img">
-          <span class="menu-card-badge">Explosivos</span>
-        </div>
-        <div class="menu-card-content">
-          <h3>Quesadilla Mexicana</h3>
-          <p>Tortilla de maíz de 36 cm, bien doradita y rellena con la proteína que quieras (Pollo, Al Pastor o Birria). Acompañada de guacamole y pico de gallo.</p>
-          <div class="menu-card-footer">
-            <div class="price">$27.000<small>Precio por unidad</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20Quesadilla%20Mexicana%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PROMOS & COMBOS ========== -->
-<section class="promo-section" id="combos">
-  <div class="section-container">
-    <div class="section-header">
-      <span class="section-tag">🎉 Promos Especiales</span>
-      <h2 class="section-title">Combos <span class="highlight">Imperdibles</span> 🌮🔥</h2>
-      <p class="section-subtitle">¡Aprovecha nuestras ofertas especiales llenas de sabor mexicano para disfrutar al máximo!</p>
+    <!-- NAVEGACIÓN DE ABAS (TABS) -->
+    <div class="menu-tabs-wrapper">
+      <button class="menu-tab-btn active" onclick="openTab(event, 'tab-platos')">
+        <i class="fas fa-utensils"></i> Platos Mexicanos
+      </button>
+      <button class="menu-tab-btn" onclick="openTab(event, 'tab-combos')">
+        <i class="fas fa-fire"></i> Promo Combos
+      </button>
+      <button class="menu-tab-btn" onclick="openTab(event, 'tab-bebidas')">
+        <i class="fas fa-cocktail"></i> Jugos & Bebidas
+      </button>
     </div>
 
-    <div class="promo-grid">
-      <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
-      <div class="promo-card-custom">
-        <div class="promo-card-img-wrapper">
-          <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
-          <span class="promo-card-badge">🔥 TOP</span>
-        </div>
-        <div class="promo-card-content">
-          <h3>🌮 Súper Promo TacoBons</h3>
-          <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
-          <div class="promo-card-footer">
-            <div class="price">$45.000<small>$60.000</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
+    <!-- ABA 1: PLATOS MEXICANOS -->
+    <div id="tab-platos" class="tab-pane active">
+      <div class="menu-grid">
+        <!-- 1. Tacos Mexicanos x 3 -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="tacosmexicanosx3.png" alt="Tacos Mexicanos x 3" class="menu-card-img">
+            <span class="menu-card-badge">TOP</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Tacos Mexicanos x 3</h3>
+            <p>Llévate 3 deliciosos tacos. Elígelos de una sola proteína, mixtos o combinados: Pollo, Al Pastor o Birria. Acompañados de pico de gallo, guacamole y limón.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>3 Tacos + Acompañamientos</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Tacos%20Mexicanos%20x3%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
-      <div class="promo-card-custom">
-        <div class="promo-card-img-wrapper">
-          <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
-          <span class="promo-card-badge">⭐ NUEVO</span>
+        <!-- 2. Nachos Mexicanos Gratinados -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="nachosmexicanosgratinados.png" alt="Nachos Mexicanos Gratinados" class="menu-card-img">
+            <span class="menu-card-badge">Especialidad</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Nachos Mexicanos Gratinados</h3>
+            <p>Crujientes nachos de colores con queso gratinado, bien cargados de sabor y con tu proteína a elección: Pollo, Al Pastor o Birria.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Para compartir</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Nachos%20Mexicanos%20Gratinados%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="promo-card-content">
-          <h3>🌮 Combo Tacos Mixtos</h3>
-          <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, ¡más una refrescante gaseosa Quatro!</p>
-          <div class="promo-card-footer">
-            <div class="price">$30.000<small>$38.000</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
-              Pedir <i class="fas fa-arrow-right"></i>
-            </a>
+
+        <!-- 3. Burro Mexicano -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="burromexicano.png" alt="Burro Mexicano" class="menu-card-img">
+            <span class="menu-card-badge">Best Seller</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Burro Mexicano</h3>
+            <p>Grande, gordito y bien cargado con tortilla de 36 cm. Elige tu proteína favorita (Pollo, Al Pastor o Birria) o combínalas. Acompañado de guacamole y pico de gallo.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Precio por unidad</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Burro%20Mexicano%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Quesadilla Mexicana -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper">
+            <img src="quesadillamexicana.png" alt="Quesadilla Mexicana" class="menu-card-img">
+            <span class="menu-card-badge">Explosivos</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Quesadilla Mexicana</h3>
+            <p>Tortilla de maíz de 36 cm, bien doradita y rellena con la proteína que quieras (Pollo, Al Pastor o Birria). Acompañada de guacamole y pico de gallo.</p>
+            <div class="menu-card-footer">
+              <div class="price">$27.000<small>Precio por unidad</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20Quesadilla%20Mexicana%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ABA 2: PROMO COMBOS -->
+    <div id="tab-combos" class="tab-pane">
+      <div class="promo-grid">
+        <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
+            <span class="promo-card-badge">🔥 TOP</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Súper Promo TacoBons</h3>
+            <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
+            <span class="promo-card-badge">⭐ NUEVO</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Combo Tacos Mixtos</h3>
+            <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, ¡más una refrescante gaseosa Quatro!</p>
+            <div class="promo-card-footer">
+              <div class="price">$30.000<small>$38.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: JUGOS & BEBIDAS -->
+    <div id="tab-bebidas" class="tab-pane">
+      <div class="menu-grid">
+        <!-- Bebida 1: Cerveza Águila Light -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="https://images.unsplash.com/photo-1608270199925-50284f67c2d1?w=600&q=80" alt="Cerveza Fría" class="menu-card-img" style="object-fit: cover;">
+            <span class="menu-card-badge">Refrescante</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Cerveza Águila Light (473 ml)</h3>
+            <p>Disfruta tu comida mexicana con una cerveza bien fría. Lata de 473 ml lista para destapar.</p>
+            <div class="menu-card-footer">
+              <div class="price">$10.000<small>Lata 473 ml</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20una%20Cerveza%20%C3%81guila%20Light%20%F0%9F%8D%BA" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bebida 2: Gaseosa Quatro / Coca-Cola -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&q=80" alt="Gaseosas Personales" class="menu-card-img" style="object-fit: cover;">
+            <span class="menu-card-badge">Clásica</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Gaseosas Personales</h3>
+            <p>Acompaña tu orden con tu gaseosa favorita bien fría: Quatro Toronja, Coca-Cola o Sprite.</p>
+            <div class="menu-card-footer">
+              <div class="price">$5.000<small>Botella Personal</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20una%20Gaseosa%20Personal%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bebida 3: Jugos Naturales -->
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600&q=80" alt="Jugos Naturales" class="menu-card-img" style="object-fit: cover;">
+            <span class="menu-card-badge">100% Natural</span>
+          </div>
+          <div class="menu-card-content">
+            <h3>Jugos Naturales</h3>
+            <p>Jugos preparados al instante en agua o en leche con frutas seleccionadas y mucho sabor.</p>
+            <div class="menu-card-footer">
+              <div class="price">$7.000<small>Vaso Grande</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20un%20Jugo%20Natural%20%F0%9F%8D%B9" target="_blank" rel="noopener" class="btn-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1312,6 +1438,18 @@
 </a>
 
 <script>
+  // ===== Función para cambiar de pestaña (Tabs) =====
+  function openTab(evt, tabName) {
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+    const tabBtns = document.querySelectorAll('.menu-tab-btn');
+    tabBtns.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+
   // ===== Menú móvil =====
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -1331,7 +1469,6 @@
       }
     });
 
-    // Cerrar menú al hacer click en enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 968) {
