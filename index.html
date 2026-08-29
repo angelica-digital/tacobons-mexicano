@@ -1115,7 +1115,7 @@
     transform: scale(1.15);
   }
 
-  /* ========== RESPONSIVE & AJUSTE MÓVIL EXCLUSIVO PARA SUBIR LA CAJA Y SEPARAR BORDES ========== */
+  /* ========== RESPONSIVE ========== */
   @media (max-width: 1024px) {
     .combos-tab-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1137,13 +1137,7 @@
     .hero-stats { justify-content: center; }
     .hero-visual { margin: 0 auto; }
 
-    /* AQUÍ SUBIMOS LA CAJA EN MÓVIL Y LE DAMOS AIRE ABAJO */
-    .menu-tabs-wrapper {
-      margin-top: -30px !important;
-      margin-bottom: 35px !important;
-      border-radius: 20px;
-    }
-
+    .menu-tabs-wrapper { top: 60px; border-radius: 20px; }
     .menu-tab-btn { font-size: 12px; padding: 8px 16px; }
 
     .carousel-item { flex: 0 0 78%; min-width: auto; }
@@ -1404,7 +1398,7 @@
       </div>
     </div>
 
-    <!-- ABA 3: JUGOS & BEBIDAS -->
+    <!-- ABA 3: JUGOS & BEBIDAS (CORREGIDO AL 100% CON CADA IMAGEN Y SU INFORMACIÓN REAL) -->
     <div id="tab-bebidas" class="tab-pane">
       <div class="carousel-container">
         <button class="carousel-nav-btn carousel-prev" onclick="scrollCarousel(-1)" aria-label="Anterior">
@@ -1415,19 +1409,19 @@
         </button>
 
         <div class="carousel-track" id="drinksCarousel">
-          <!-- Bebida 1 -->
+          <!-- Bebida 1: Coca-Cola Personal -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
-                <img src="bebida1.png" alt="Águila Light" class="menu-card-img" style="object-fit: cover;">
-                <span class="menu-card-badge">Cerveza</span>
+                <img src="bebida1.png" alt="Coca-Cola Personal" class="menu-card-img" style="object-fit: cover;">
+                <span class="menu-card-badge">Clásica</span>
               </div>
               <div class="menu-card-content">
-                <h3>Águila Light (473 ml)</h3>
-                <p>Cerveza bien fría en lata de 473 ml, ideal para acompañar tus tacos.</p>
+                <h3>Coca-Cola Personal</h3>
+                <p>Refrescante sabor original bien helado para cualquier comida.</p>
                 <div class="menu-card-footer">
-                  <div class="price">$10.000<small>Lata 473 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light" target="_blank" rel="noopener" class="btn-card">
+                  <div class="price">$5.000<small>Botella 400 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1435,7 +1429,7 @@
             </div>
           </div>
 
-          <!-- Bebida 2 -->
+          <!-- Bebida 2: Gaseosa Quatro Toronja -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1455,7 +1449,7 @@
             </div>
           </div>
 
-          <!-- Bebida 3 -->
+          <!-- Bebida 3: Agua Pool con Gas -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1475,7 +1469,7 @@
             </div>
           </div>
 
-          <!-- Bebida 4 -->
+          <!-- Bebida 4: Jugo Hit de Mango -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1495,7 +1489,7 @@
             </div>
           </div>
 
-          <!-- Bebida 5 -->
+          <!-- Bebida 5: Jugo Hit de Mora -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1515,7 +1509,7 @@
             </div>
           </div>
 
-          <!-- Bebida 6 -->
+          <!-- Bebida 6: Jugo Hit Naranja Piña -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1535,19 +1529,19 @@
             </div>
           </div>
 
-          <!-- Bebida 7 -->
+          <!-- Bebida 7: Jugo Hit Frutas Tropicales -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
-                <img src="bebida7.png" alt="Coca-Cola Personal" class="menu-card-img" style="object-fit: cover;">
-                <span class="menu-card-badge">Clásica</span>
+                <img src="bebida7.png" alt="Jugo Hit Frutas Tropicales" class="menu-card-img" style="object-fit: cover;">
+                <span class="menu-card-badge">Tropical</span>
               </div>
               <div class="menu-card-content">
-                <h3>Coca-Cola Personal</h3>
-                <p>Refrescante sabor original bien helado para cualquier comida.</p>
+                <h3>Jugo Hit Frutas Tropicales</h3>
+                <p>Exótica mezcla de frutas tropicales seleccionadas bien frías.</p>
                 <div class="menu-card-footer">
-                  <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal" target="_blank" rel="noopener" class="btn-card">
+                  <div class="price">$5.000<small>Botella 500 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20Frutas%20Tropicales" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1555,7 +1549,7 @@
             </div>
           </div>
 
-          <!-- Bebida 8 -->
+          <!-- Bebida 8: Jugo Hit de Lulo -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1567,7 +1561,7 @@
                 <p>El balance perfecto entre ácido y refrescante con todo el sabor del lulo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Lulo" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20de%20Lulo" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1575,19 +1569,19 @@
             </div>
           </div>
 
-          <!-- Bebida 9 -->
+          <!-- Bebida 9: Águila Light -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
-                <img src="bebida9.png" alt="Jugo Hit Frutas Tropicales" class="menu-card-img" style="object-fit: cover;">
-                <span class="menu-card-badge">Tropical</span>
+                <img src="bebida9.png" alt="Águila Light" class="menu-card-img" style="object-fit: cover;">
+                <span class="menu-card-badge">Cerveza</span>
               </div>
               <div class="menu-card-content">
-                <h3>Jugo Hit Frutas Tropicales</h3>
-                <p>Exótica mezcla de frutas tropicales seleccionadas bien frías.</p>
+                <h3>Águila Light (473 ml)</h3>
+                <p>Cerveza bien fría en lata de 473 ml, ideal para acompañar tus tacos.</p>
                 <div class="menu-card-footer">
-                  <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Frutas%20Tropicales" target="_blank" rel="noopener" class="btn-card">
+                  <div class="price">$10.000<small>Lata 473 ml</small></div>
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1595,7 +1589,7 @@
             </div>
           </div>
 
-          <!-- Bebida 10 -->
+          <!-- Bebida 10: Agua Pool sin Gas -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1615,7 +1609,7 @@
             </div>
           </div>
 
-          <!-- Bebida 11 -->
+          <!-- Bebida 11: Coca-Cola Familiar -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
