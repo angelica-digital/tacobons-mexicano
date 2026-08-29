@@ -595,7 +595,7 @@
     color: white;
   }
 
-  /* ========== PROMOS & COMBOS GRID (VERTICAL 1 COLUMNA) ========== */
+  /* ========== PROMOS & COMBOS (APILADOS VERTICALMENTE EN 1 SOLA COLUMNA) ========== */
   .promo-section {
     background:
       radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
@@ -603,9 +603,9 @@
   }
 
   .promo-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .promo-banner {
@@ -619,6 +619,7 @@
     grid-template-columns: 1.4fr 1fr;
     gap: 40px;
     align-items: center;
+    width: 100%;
   }
 
   .promo-banner::before {
@@ -1191,7 +1192,7 @@
   </div>
 </section>
 
-<!-- ========== PROMOS & COMBOS (VERTICAL 1 COLUMNA) ========== -->
+<!-- ========== PROMOS & COMBOS (APILADOS VERTICALMENTE) ========== -->
 <section class="promo-section" id="combos">
   <div class="section-container">
     <div class="section-header">
