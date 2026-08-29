@@ -468,13 +468,12 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) - SEPARACIÓN CORRECTA Y AIRE ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 15px;
-    margin-bottom: 50px; /* Margen inferior amplio para separar la caja de las tarjetas */
+    margin-bottom: 30px;
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
@@ -520,12 +519,18 @@
 
   .tab-pane {
     display: none;
-    padding-top: 10px; /* Margen interno para que las tarjetas respiren */
   }
 
   .tab-pane.active {
     display: block;
     animation: fadeInTab 0.4s ease forwards;
+  }
+
+  /* SEPARACIÓN EXACTA Y LIMPIA PARA CADA PESTAÑA (EVITA QUE CHOQUEN CON LA CAJA) */
+  .tab-pane .menu-grid,
+  .tab-pane .combos-tab-grid,
+  .tab-pane .carousel-container {
+    margin-top: 25px !important;
   }
 
   @keyframes fadeInTab {
