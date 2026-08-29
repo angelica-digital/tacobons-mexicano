@@ -663,7 +663,7 @@
     color: white;
   }
 
-  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO DEL MENÚ) ========== */
+  /* ========== CARDS PROMO EXCLUSIVAS (1200x900 / 4:3 SIN CORTES) ========== */
   .exclusive-promo-section {
     background:
       radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
@@ -701,7 +701,7 @@
   .promo-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3; /* Proporción exacta 1200x900 para que se vea completa sin recortes */
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -712,7 +712,7 @@
   .promo-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Muestra toda la imagen completa sin recortar ningún detalle */
     transition: transform 0.5s ease;
   }
 
@@ -1335,7 +1335,7 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS (ABA DEL MENÚ - LOS 3 NUEVOS COMBOS) -->
+    <!-- ABA 2: PROMO COMBOS (TUS 3 NUEVOS COMBOS) -->
     <div id="tab-combos" class="tab-pane">
       <div class="promo-grid">
         <!-- COMBO 1 -->
@@ -1405,7 +1405,7 @@
         </button>
 
         <div class="carousel-track" id="drinksCarousel">
-          <!-- Bebida 1 -->
+          <!-- Bebidas 1 a 11 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1425,7 +1425,6 @@
             </div>
           </div>
 
-          <!-- Bebida 2 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1445,7 +1444,6 @@
             </div>
           </div>
 
-          <!-- Bebida 3 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1465,7 +1463,6 @@
             </div>
           </div>
 
-          <!-- Bebida 4 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1485,7 +1482,6 @@
             </div>
           </div>
 
-          <!-- Bebida 5 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1505,7 +1501,6 @@
             </div>
           </div>
 
-          <!-- Bebida 6 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1525,7 +1520,6 @@
             </div>
           </div>
 
-          <!-- Bebida 7 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1545,7 +1539,6 @@
             </div>
           </div>
 
-          <!-- Bebida 8 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1565,7 +1558,6 @@
             </div>
           </div>
 
-          <!-- Bebida 9 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1585,7 +1577,6 @@
             </div>
           </div>
 
-          <!-- Bebida 10 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1605,7 +1596,6 @@
             </div>
           </div>
 
-          <!-- Bebida 11 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
@@ -1632,7 +1622,7 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (ABAJO DEL MENÚ - LOS 2 COMBOS ORIGINALES) ========== -->
+<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (ABAJO DEL MENÚ - LOS 2 COMBOS ORIGINALES CON TAMAÑO 1200x900 SIN CORTES) ========== -->
 <section class="exclusive-promo-section" id="promos-especiales">
   <div class="section-container">
     <div class="section-header">
@@ -1839,7 +1829,7 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.menu-card, .promo-card-custom, .location-section, .info-card, .hero-visual .protein-card').forEach(el => {
+  document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-visual .protein-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
