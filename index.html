@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* ========== RESET & VARIABLES (EQUILIBRIO DE COLOR CON LA LOGO: VERDE Y AMARILLO PROTAGONISTAS) ========== */
+  /* ========== RESET & VARIABLES (EQUILIBRIO PERFECTO: VERDE, AMARILLO Y ROSA DE LA LOGO) ========== */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -27,20 +27,21 @@
     --bg-card: #1A100C;
     --bg-card-hover: #22150F;
     
-    /* Colores exactos extraídos de la logo */
+    /* Colores exactos de la logo con presencia equilibrada */
     --logo-green: #34D707;
     --logo-green-dark: #28a805;
     --logo-yellow: #FDD603;
     --logo-yellow-dark: #C9A700;
     --logo-pink: #FD0C79;
+    --logo-pink-dark: #C2185B;
     --logo-teal: #02A69C;
     --logo-orange: #C65506;
 
     --cream: #FFF8E7;
     --text: #F5E6D3;
     --text-muted: #B8A89A;
-    --border: rgba(52, 215, 7, 0.2);
-    --shadow-glow: 0 0 35px rgba(52, 215, 7, 0.25);
+    --border: rgba(253, 12, 121, 0.25);
+    --shadow-glow: 0 0 35px rgba(253, 12, 121, 0.3);
   }
 
   html {
@@ -112,7 +113,7 @@
   }
 
   .nav-links a:hover {
-    color: var(--logo-green);
+    color: var(--logo-pink);
   }
 
   .nav-links a::after {
@@ -122,7 +123,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--logo-green);
+    background: var(--logo-pink);
     transition: width 0.3s ease;
   }
 
@@ -131,7 +132,7 @@
   }
 
   .nav-cta {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-green-dark) 100%);
+    background: linear-gradient(135deg, var(--logo-pink) 0%, var(--logo-yellow) 100%);
     color: #120D0A;
     padding: 11px 22px;
     border-radius: 50px;
@@ -141,21 +142,21 @@
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 4px 14px rgba(253, 12, 121, 0.4);
     border: none;
     cursor: pointer;
   }
 
   .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 6px 20px rgba(253, 12, 121, 0.6);
   }
 
   .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-size: 24px;
     cursor: pointer;
   }
@@ -169,8 +170,8 @@
     padding: 60px 24px 80px 24px;
     overflow: hidden;
     background:
-      radial-gradient(ellipse at top right, rgba(52, 215, 7, 0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(253, 214, 3, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at top right, rgba(253, 12, 121, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(52, 215, 7, 0.12) 0%, transparent 50%),
       linear-gradient(180deg, #1A100C 0%, #120D0A 100%);
   }
 
@@ -214,7 +215,7 @@
     object-fit: contain;
     margin-bottom: 28px;
     display: block;
-    filter: drop-shadow(0 0 18px rgba(52, 215, 7, 0.4));
+    filter: drop-shadow(0 0 18px rgba(253, 12, 121, 0.4));
     transition: transform 0.3s ease;
   }
 
@@ -226,8 +227,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(52, 215, 7, 0.15);
-    color: var(--logo-green);
+    background: rgba(253, 12, 121, 0.15);
+    color: var(--logo-pink);
     padding: 8px 18px;
     border-radius: 50px;
     font-weight: 700;
@@ -235,13 +236,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 24px;
-    border: 1px solid rgba(52, 215, 7, 0.3);
+    border: 1px solid rgba(253, 12, 121, 0.3);
   }
 
   .hero-content .badge .dot {
     width: 8px;
     height: 8px;
-    background: var(--logo-green);
+    background: var(--logo-pink);
     border-radius: 50%;
     animation: pulse-dot 1.5s ease-in-out infinite;
   }
@@ -259,7 +260,7 @@
   }
 
   .hero h1 .highlight {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
+    background: linear-gradient(135deg, var(--logo-pink) 0%, var(--logo-yellow) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -305,15 +306,15 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-green-dark) 100%);
-    color: #120D0A;
+    background: linear-gradient(135deg, var(--logo-pink) 0%, var(--logo-orange) 100%);
+    color: white;
     font-weight: 800;
-    box-shadow: 0 8px 24px rgba(52, 215, 7, 0.4);
+    box-shadow: 0 8px 24px rgba(253, 12, 121, 0.4);
   }
 
   .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 12px 32px rgba(253, 12, 121, 0.6);
   }
 
   .btn-secondary {
@@ -387,14 +388,14 @@
     overflow: hidden;
   }
 
-  .protein-card:nth-child(1) { grid-row: span 2; padding: 28px 14px; background: linear-gradient(160deg, rgba(52, 215, 7, 0.15), var(--bg-card)); }
+  .protein-card:nth-child(1) { grid-row: span 2; padding: 28px 14px; background: linear-gradient(160deg, rgba(253, 12, 121, 0.18), var(--bg-card)); }
   .protein-card:nth-child(2) { background: linear-gradient(160deg, rgba(253, 214, 3, 0.15), var(--bg-card)); }
-  .protein-card:nth-child(3) { background: linear-gradient(160deg, rgba(253, 12, 121, 0.15), var(--bg-card)); }
+  .protein-card:nth-child(3) { background: linear-gradient(160deg, rgba(52, 215, 7, 0.15), var(--bg-card)); }
   .protein-card:nth-child(4) { grid-column: span 2; background: linear-gradient(160deg, rgba(2, 166, 156, 0.15), var(--bg-card)); }
 
   .protein-card:hover {
     transform: translateY(-6px);
-    border-color: var(--logo-green);
+    border-color: var(--logo-pink);
     box-shadow: var(--shadow-glow);
   }
 
@@ -435,8 +436,8 @@
 
   .section-tag {
     display: inline-block;
-    background: rgba(52, 215, 7, 0.12);
-    color: var(--logo-green);
+    background: rgba(253, 12, 121, 0.12);
+    color: var(--logo-pink);
     padding: 6px 16px;
     border-radius: 50px;
     font-size: 12px;
@@ -444,7 +445,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 16px;
-    border: 1px solid rgba(52, 215, 7, 0.3);
+    border: 1px solid rgba(253, 12, 121, 0.3);
   }
 
   .section-title {
@@ -454,7 +455,7 @@
   }
 
   .section-title .highlight {
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow));
+    background: linear-gradient(135deg, var(--logo-pink), var(--logo-yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -491,8 +492,8 @@
 
   .menu-card:hover {
     transform: translateY(-10px);
-    border-color: var(--logo-green);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(52, 215, 7, 0.3);
+    border-color: var(--logo-pink);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(253, 12, 121, 0.3);
   }
 
   .menu-card-img {
@@ -522,8 +523,8 @@
     position: absolute;
     top: 14px;
     right: 14px;
-    background: var(--logo-yellow);
-    color: var(--bg-dark);
+    background: var(--logo-pink);
+    color: white;
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 12px;
@@ -575,8 +576,8 @@
   }
 
   .btn-card {
-    background: rgba(52, 215, 7, 0.12);
-    color: var(--logo-green);
+    background: rgba(253, 12, 121, 0.12);
+    color: var(--logo-pink);
     padding: 10px 18px;
     border-radius: 50px;
     font-weight: 700;
@@ -584,31 +585,30 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid rgba(52, 215, 7, 0.3);
+    border: 1px solid rgba(253, 12, 121, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
   }
 
   .btn-card:hover {
-    background: var(--logo-green);
-    color: #120D0A;
-    font-weight: 800;
+    background: var(--logo-pink);
+    color: white;
   }
 
   /* ========== PROMOS ========== */
   .promo-section {
     background:
-      radial-gradient(ellipse at center, rgba(52, 215, 7, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
       var(--bg-dark);
   }
 
   .promo-banner {
-    background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-teal) 50%, #015c55 100%);
+    background: linear-gradient(135deg, var(--logo-pink) 0%, var(--logo-orange) 50%, #880E4F 100%);
     border-radius: 28px;
     padding: 60px 50px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 25px 60px rgba(52, 215, 7, 0.25);
+    box-shadow: 0 25px 60px rgba(253, 12, 121, 0.3);
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 40px;
@@ -653,7 +653,7 @@
 
   .promo-banner h2 {
     font-size: clamp(28px, 4vw, 44px);
-    color: #120D0A;
+    color: white;
     margin-bottom: 18px;
     position: relative;
     z-index: 2;
@@ -661,9 +661,8 @@
   }
 
   .promo-banner p {
-    color: #1A100C;
+    color: rgba(255, 255, 255, 0.95);
     font-size: 17px;
-    font-weight: 600;
     margin-bottom: 28px;
     position: relative;
     z-index: 2;
@@ -671,7 +670,7 @@
   }
 
   .promo-price {
-    background: rgba(18, 13, 10, 0.75);
+    background: rgba(0, 0, 0, 0.35);
     border: 2px dashed var(--logo-yellow);
     border-radius: 14px;
     padding: 16px 22px;
@@ -683,7 +682,7 @@
 
   .promo-price .old {
     text-decoration: line-through;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     margin-right: 12px;
     font-weight: 600;
@@ -765,14 +764,14 @@
   }
 
   .info-card:hover {
-    border-color: var(--logo-green);
+    border-color: var(--logo-pink);
     transform: translateX(4px);
   }
 
   .info-icon {
     width: 52px;
     height: 52px;
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-teal));
+    background: linear-gradient(135deg, var(--logo-pink), var(--logo-yellow));
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -795,7 +794,7 @@
   }
 
   .info-card a {
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-weight: 600;
   }
 
@@ -822,7 +821,7 @@
   /* ========== CTA FINAL ========== */
   .cta-final {
     background:
-      radial-gradient(ellipse at center, rgba(52, 215, 7, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at center, rgba(253, 12, 121, 0.18) 0%, transparent 60%),
       var(--bg-dark);
     text-align: center;
     padding: 110px 24px;
@@ -838,7 +837,7 @@
   }
 
   .cta-final h2 .highlight {
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow));
+    background: linear-gradient(135deg, var(--logo-pink), var(--logo-yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -910,22 +909,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--logo-green);
+    color: var(--logo-pink);
     font-size: 18px;
     transition: all 0.3s ease;
   }
 
   .footer-social a:hover {
-    background: var(--logo-green);
-    color: #120D0A;
+    background: var(--logo-pink);
+    color: white;
     transform: translateY(-3px);
-    border-color: var(--logo-green);
+    border-color: var(--logo-pink);
   }
 
   .footer-logo {
     font-family: 'Bungee', cursive;
     font-size: 24px;
-    background: linear-gradient(135deg, var(--logo-green), var(--logo-yellow));
+    background: linear-gradient(135deg, var(--logo-pink), var(--logo-yellow));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1281,7 +1280,7 @@
   <p class="footer-tag">Comida Mexicana Auténtica en La Tebaida, Quindío 🌮</p>
   <div class="footer-divider"></div>
   <p class="footer-dev">
-    Diseñado con <strong style="color: var(--logo-green);">🔥 potencia</strong> por <a href="https://wa.me/5511953285680" target="_blank" rel="noopener" style="color: var(--logo-yellow); font-weight: 700;">Angélica Digital</a>
+    Diseñado con <strong style="color: var(--logo-pink);">🔥 potencia</strong> por <a href="https://wa.me/5511953285680" target="_blank" rel="noopener" style="color: var(--logo-yellow); font-weight: 700;">Angélica Digital</a>
   </p>
   <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
 </footer>
