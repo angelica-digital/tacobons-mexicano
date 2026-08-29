@@ -367,16 +367,18 @@
     letter-spacing: 0.5px;
   }
 
-  /* ========== NUEVA IMAGEN HERO EN EL CUADRO AZUL ========== */
+  /* ========== IMAGEN HERO (MARIA ANGELICA CEO 1200x900 -> 4/3) ========== */
   .hero-image-wrapper {
     position: relative;
-    max-width: 440px;
+    max-width: 480px;
     margin: 0 auto;
     border-radius: 28px;
     overflow: hidden;
+    aspect-ratio: 4 / 3;
     border: 2px solid var(--logo-green);
     box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(52, 215, 7, 0.3);
     transition: transform 0.4s ease;
+    background: #0A0604;
   }
 
   .hero-image-wrapper:hover {
@@ -386,7 +388,7 @@
 
   .hero-image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
   }
@@ -643,7 +645,7 @@
     gap: 28px;
   }
 
-  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - ROSA Y CENTRADAS ABAJO) ========== */
+  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - ETIQUETAS ROSAS Y CENTRADAS) ========== */
   .exclusive-promo-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.15) 0%, transparent 40%),
@@ -1109,7 +1111,7 @@
     .hero-content .badge { margin-left: auto; margin-right: auto; }
     .hero-buttons { justify-content: center; }
     .hero-stats { justify-content: center; }
-    .hero-visual { margin: 0 auto; }
+    .hero-image-wrapper { max-width: 380px; }
 
     .menu-tabs-wrapper {
       margin-top: -30px !important;
@@ -1129,9 +1131,6 @@
   @media (max-width: 580px) {
     section { padding: 70px 20px; }
     .hero { padding: 40px 20px 60px 20px; min-height: auto; }
-    .hero-visual { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
-    .protein-card:nth-child(1) { grid-row: auto; }
-    .protein-card:nth-child(4) { grid-column: auto; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
     .navbar-inner { padding: 0 16px; }
     .hero-content .hero-logo { height: 60px; }
@@ -1156,7 +1155,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO (CON FOTO REAL EN LUGAR DE ICONOS) ========== -->
+<!-- ========== HERO (CON mariaangelicaceo.png) ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1195,9 +1194,9 @@
       </div>
     </div>
 
-    <!-- IMAGEN DE LA CHICA SONRIENDO CON SU SOMBRERO Y PRODUCTO -->
+    <!-- IMAGEN REAL DE MARIA ANGELICA CEO (1200x900) -->
     <div class="hero-image-wrapper">
-      <img src="image_faf43f.jpg" alt="TacoBons - Sabor Mexicano Auténtico">
+      <img src="mariaangelicaceo.png" alt="TacoBons - Sabor Mexicano Auténtico">
     </div>
   </div>
 </section>
@@ -1598,7 +1597,7 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (ABAJO - ETIQUETAS ROSAS Y CENTRADAS) ========== -->
+<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS ========== -->
 <section class="exclusive-promo-section" id="promos-especiales">
   <div class="section-container">
     <div class="section-header">
@@ -1608,7 +1607,7 @@
     </div>
 
     <div class="promo-grid-original">
-      <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+      <!-- PROMO 1 -->
       <div class="promo-card-custom">
         <div class="promo-card-img-wrapper">
           <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
@@ -1626,7 +1625,7 @@
         </div>
       </div>
 
-      <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+      <!-- PROMO 2 -->
       <div class="promo-card-custom">
         <div class="promo-card-img-wrapper">
           <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
@@ -1805,7 +1804,7 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-visual .protein-card').forEach(el => {
+  document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-image-wrapper').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
