@@ -468,18 +468,18 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) - CORREGIDO CON PADDING Y ESPACIO INFERIOR ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - SEPARACIÓN PERFECTA ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 60px; /* Margen exterior generoso */
+    margin-bottom: 40px; /* Margen externo inferior para separar de los contenidos */
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
     background: rgba(18, 13, 10, 0.95);
     backdrop-filter: blur(10px);
-    padding: 20px 16px; /* Padding interior para separar el borde exterior de los botones */
+    padding: 18px 16px;
     border-radius: 28px;
     border: 1px solid var(--border);
     max-width: 780px;
@@ -519,6 +519,7 @@
 
   .tab-pane {
     display: none;
+    padding-top: 15px; /* Espacio superior interno para que las tarjetas no toquen los bordes */
   }
 
   .tab-pane.active {
@@ -1581,7 +1582,7 @@
                 <p>Exótica mezcla de frutas tropicales seleccionadas bien frías.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20Frutas%20Tropicales" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Frutas%20Tropicales" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
