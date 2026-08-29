@@ -583,7 +583,7 @@
     transform: scale(1.04);
   }
 
-  /* ETIQUETA ROSA EN LA ESQUINA INFERIOR IZQUIERDA */
+  /* ETIQUETA INFERIOR IZQUIERDA PARA PLATOS Y BEBIDAS */
   .menu-card-badge {
     position: absolute;
     bottom: 14px;
@@ -671,7 +671,7 @@
     gap: 28px;
   }
 
-  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - 2 ORIGINALES 1200x900) ========== */
+  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - ETIQUETA CENTRADA EN LA PARTE INFERIOR SEGÚN TU SOLICITUD) ========== */
   .exclusive-promo-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.15) 0%, transparent 40%),
@@ -729,13 +729,15 @@
     transform: scale(1.04);
   }
 
+  /* ETIQUETA CENTRADA ABAJO EN LAS DOS PROMOS EXCLUSIVAS */
   .promo-card-badge {
     position: absolute;
     bottom: 14px;
-    left: 14px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--logo-yellow);
     color: var(--bg-dark);
-    padding: 6px 14px;
+    padding: 6px 18px;
     border-radius: 50px;
     font-size: 11px;
     font-weight: 800;
@@ -1455,7 +1457,7 @@
             </div>
           </div>
 
-          <!-- Bebida 3 (Agua Pool con Gas - CORREGIDO AQUÍ) -->
+          <!-- Bebida 3 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1463,7 +1465,7 @@
                 <span class="menu-card-badge">Pura</span>
               </div>
               <div class="menu-card-content">
-                <h3>Agua Pool sin Gas</h3>
+                <h3>Agua Pool con Gas</h3>
                 <p>Agua purificada con gas bien fría para hidratarte al máximo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
@@ -1603,7 +1605,7 @@
                 <span class="menu-card-badge">Pura</span>
               </div>
               <div class="menu-card-content">
-                <h3>Agua Pool con Gas</h3>
+                <h3>Agua Pool sin Gas</h3>
                 <p>Agua purificada fresca y ligera para acompañar cualquier momento.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
@@ -1642,7 +1644,7 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (LOS 2 COMBOS ORIGINALES) ========== -->
+<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (INSIGNIAS CENTRADAS ABAJO) ========== -->
 <section class="exclusive-promo-section" id="promos-especiales">
   <div class="section-container">
     <div class="section-header">
@@ -1856,7 +1858,7 @@
     observer.observe(el);
   });
 
-  // ===== Navbar shrink on scroll =====
+  /* Navbar shrink on scroll */
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (navbar) {
