@@ -531,7 +531,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ========== CARDS DE PLATOS & PROMOS ========== */
+  /* ========== CARDS DE PLATOS ========== */
   .menu-section {
     background: var(--bg-card);
     border-top: 1px solid var(--border);
@@ -663,7 +663,7 @@
     color: white;
   }
 
-  /* CARDS COMBOS CON BORDES ROSAS */
+  /* CARDS COMBOS CON BORDES ROSAS Y FORMATO 1080x1350 */
   .promo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1328,10 +1328,46 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS -->
+    <!-- ABA 2: PROMO COMBOS (TODOS LOS 5 COMBOS RESTAURADOS Y EN FORMATO VERTICAL 1080x1350) -->
     <div id="tab-combos" class="tab-pane">
       <div class="promo-grid">
-        <!-- PROMO 1: Combo de Burro + Nachos + Gaseosa -->
+        <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
+            <span class="promo-card-badge">🔥 TOP</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Súper Promo TacoBons</h3>
+            <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
+            <div class="promo-card-footer">
+              <div class="price">$45.000<small>$60.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+        <div class="promo-card-custom">
+          <div class="promo-card-img-wrapper">
+            <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
+            <span class="promo-card-badge">⭐ NUEVO</span>
+          </div>
+          <div class="promo-card-content">
+            <h3>Combo Tacos Mixtos</h3>
+            <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, más una refrescante gaseosa Quatro.</p>
+            <div class="promo-card-footer">
+              <div class="price">$30.000<small>$38.000</small></div>
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+                Pedir <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROMO 3: Combo de Burro + Nachos + Gaseosa -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
             <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="promo-card-img">
@@ -1349,7 +1385,7 @@
           </div>
         </div>
 
-        <!-- PROMO 2: Quesadilla + Nachos + Gaseosa de 400 ml -->
+        <!-- PROMO 4: Quesadilla + Nachos + Gaseosa de 400 ml -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
             <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa de 400 ml" class="promo-card-img">
@@ -1367,7 +1403,7 @@
           </div>
         </div>
 
-        <!-- PROMO 3: Tacos x 3 + Nachos + Gaseosa -->
+        <!-- PROMO 5: Tacos x 3 + Nachos + Gaseosa -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
             <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="promo-card-img">
@@ -1704,7 +1740,7 @@
 </a>
 
 <script>
-  // ===== Função para trocar de abas (Tabs) =====
+  // ===== Función para cambiar de pestaña (Tabs) =====
   function openTab(evt, tabName) {
     const tabPanes = document.querySelectorAll('.tab-pane');
     tabPanes.forEach(pane => pane.classList.remove('active'));
@@ -1721,7 +1757,7 @@
     }
   }
 
-  // ===== Função para controlar o carrossel de bebidas =====
+  // ===== Función para controlar el carrusel de bebidas =====
   function scrollCarousel(direction) {
     const track = document.getElementById('drinksCarousel');
     if (track) {
@@ -1730,7 +1766,7 @@
     }
   }
 
-  // ===== Menu mobile =====
+  // ===== Menú móvil =====
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (menuToggle && navLinks) {
@@ -1758,7 +1794,7 @@
     });
   }
 
-  // ===== Smooth scroll para links internos =====
+  // ===== Smooth scroll para anclas =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -1772,7 +1808,7 @@
     });
   });
 
-  // ===== Animação suave ao rolar a página =====
+  // ===== Animación reveal al hacer scroll =====
   const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1790,7 +1826,7 @@
     observer.observe(el);
   });
 
-  // ===== Navbar reduzida ao rolar =====
+  // ===== Navbar shrink on scroll =====
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (navbar) {
