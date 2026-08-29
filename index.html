@@ -468,12 +468,13 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) - SEPARACIÓN PERFECTA ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - SEPARACIÓN CORRECTA Y AIRE ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 40px; /* Margen externo inferior para separar de los contenidos */
+    margin-top: 15px;
+    margin-bottom: 50px; /* Margen inferior amplio para separar la caja de las tarjetas */
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
@@ -519,7 +520,7 @@
 
   .tab-pane {
     display: none;
-    padding-top: 15px; /* Espacio superior interno para que las tarjetas no toquen los bordes */
+    padding-top: 10px; /* Margen interno para que las tarjetas respiren */
   }
 
   .tab-pane.active {
