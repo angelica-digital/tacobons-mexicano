@@ -367,26 +367,27 @@
     letter-spacing: 0.5px;
   }
 
-  /* ========== CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO Y EMOJIS FLOTANTES ========== */
+  /* ========== CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO ROSA Y SOMBRA ROSA ========== */
   .hero-image-wrapper {
     position: relative;
     max-width: 420px;
     margin: 0 auto;
     border-radius: 28px;
-    overflow: visible; /* Permite que los emojis floten fuera de la tarjeta */
+    overflow: visible;
     aspect-ratio: 4 / 5;
-    /* Borde traslúcido y sutil brillo neón profesional */
-    border: 2px solid rgba(52, 215, 7, 0.4);
+    /* Borde sutil traslúcido rosa neón */
+    border: 2px solid rgba(253, 12, 121, 0.45);
     background: rgba(26, 16, 12, 0.6);
     backdrop-filter: blur(8px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 30px rgba(52, 215, 7, 0.15);
+    /* Sombra de fondo / brillo neón en tono rosa */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 35px rgba(253, 12, 121, 0.35);
     transition: all 0.4s ease;
   }
 
   .hero-image-wrapper:hover {
     transform: scale(1.02);
-    border-color: rgba(253, 214, 3, 0.6);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(253, 214, 3, 0.25);
+    border-color: rgba(253, 12, 121, 0.8);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 45px rgba(253, 12, 121, 0.5);
   }
 
   .hero-image-wrapper img {
@@ -668,7 +669,7 @@
     color: white;
   }
 
-  /* ========== CARDS TRES COMBOS EN LA PESTAÑA (3 COLUMNAS Y FORMATO VERTICAL 1080x1350 -> 4/5) ========== */
+  /* ========== CARDS TRES COMBOS EN LA PESTAÑA ========== */
   .combos-tab-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1185,7 +1186,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO (CON FOTO Y BORDE TRASLÚCIDO + EMOJIS FLOTANTES) ========== -->
+<!-- ========== HERO ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1224,7 +1225,7 @@
       </div>
     </div>
 
-    <!-- CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO Y EMOJIS -->
+    <!-- IMAGEN HERO CON BORDE Y SOMBRA ROSA + EMOJIS FLOTANTES -->
     <div class="hero-image-wrapper">
       <span class="floating-emoji emoji-taco">🌮</span>
       <span class="floating-emoji emoji-burrito">🌯</span>
