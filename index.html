@@ -473,7 +473,7 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
@@ -524,13 +524,6 @@
   .tab-pane.active {
     display: block;
     animation: fadeInTab 0.4s ease forwards;
-  }
-
-  /* SEPARACIÓN EXACTA Y CORREGIDA PARA QUE NINGUNA PESTAÑA TOQUE LA CAJA */
-  #tab-platos .menu-grid,
-  #tab-combos .combos-tab-grid,
-  #tab-bebidas .carousel-container {
-    margin-top: 35px !important;
   }
 
   @keyframes fadeInTab {
@@ -1122,7 +1115,7 @@
     transform: scale(1.15);
   }
 
-  /* ========== RESPONSIVE ========== */
+  /* ========== RESPONSIVE & AJUSTE MÓVIL EXCLUSIVO PARA SUBIR LA CAJA Y SEPARAR BORDES ========== */
   @media (max-width: 1024px) {
     .combos-tab-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1144,7 +1137,13 @@
     .hero-stats { justify-content: center; }
     .hero-visual { margin: 0 auto; }
 
-    .menu-tabs-wrapper { top: 60px; border-radius: 20px; }
+    /* AQUÍ SUBIMOS LA CAJA EN MÓVIL Y LE DAMOS AIRE ABAJO */
+    .menu-tabs-wrapper {
+      margin-top: -30px !important;
+      margin-bottom: 35px !important;
+      border-radius: 20px;
+    }
+
     .menu-tab-btn { font-size: 12px; padding: 8px 16px; }
 
     .carousel-item { flex: 0 0 78%; min-width: auto; }
