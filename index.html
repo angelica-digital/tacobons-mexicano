@@ -468,23 +468,24 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) - ESTÁTICO CON BUEN ESPACIO INFERIOR ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - CORREGIDO CON PADDING Y ESPACIO INFERIOR ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 50px; /* Margen mayor para separar las pestañas de las tarjetas de contenido */
+    margin-bottom: 60px; /* Margen exterior generoso */
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
-    background: rgba(18, 13, 10, 0.92);
+    background: rgba(18, 13, 10, 0.95);
     backdrop-filter: blur(10px);
-    padding: 16px 14px;
-    border-radius: 60px;
+    padding: 20px 16px; /* Padding interior para separar el borde exterior de los botones */
+    border-radius: 28px;
     border: 1px solid var(--border);
     max-width: 780px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   }
 
   .menu-tab-btn {
@@ -1760,7 +1761,7 @@
 <!-- ========== FLOATING WHATSAPP ========== -->
 <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20hacer%20un%20pedido%20%F0%9F%9B%97%F0%9F%8C%AE" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
-</a
+</a>
 
 <script>
   // ===== Función para cambiar de pestaña (Tabs) =====
