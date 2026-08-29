@@ -663,11 +663,21 @@
     color: white;
   }
 
-  /* CARDS COMBOS CON BORDES ROSAS */
-  .promo-grid {
+  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO DEL MENÚ) ========== */
+  .exclusive-promo-section {
+    background:
+      radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
+      var(--bg-dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .promo-grid-original {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .promo-card-custom {
@@ -691,7 +701,7 @@
   .promo-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -725,7 +735,7 @@
   }
 
   .promo-card-content {
-    padding: 24px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -733,18 +743,15 @@
   }
 
   .promo-card-custom h3 {
-    font-size: 18px;
+    font-size: 21px;
     color: var(--cream);
     margin-bottom: 12px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
   }
 
   .promo-card-custom p {
     color: var(--text-muted);
-    font-size: 13.5px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 24px;
     flex-grow: 1;
     line-height: 1.5;
   }
@@ -753,7 +760,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 18px;
+    padding-top: 20px;
     border-top: 1px dashed rgba(253, 12, 121, 0.3);
     gap: 12px;
   }
@@ -761,7 +768,7 @@
   .promo-card-custom .price {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 26px;
     color: var(--logo-yellow);
   }
 
@@ -776,7 +783,7 @@
   .btn-promo-card {
     background: linear-gradient(135deg, var(--logo-green) 0%, var(--logo-yellow) 100%);
     color: #120D0A;
-    padding: 11px 20px;
+    padding: 12px 24px;
     border-radius: 50px;
     font-weight: 800;
     font-size: 13px;
@@ -1328,57 +1335,57 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS (SOLO LOS 3 COMBOS ORIGINALES) -->
+    <!-- ABA 2: PROMO COMBOS (ABA DEL MENÚ - LOS 3 NUEVOS COMBOS) -->
     <div id="tab-combos" class="tab-pane">
       <div class="promo-grid">
-        <!-- PROMO 1: Combo de Burro + Nachos + Gaseosa -->
+        <!-- COMBO 1 -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
             <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="promo-card-img">
-            <span class="promo-card-badge">🔥 TOP</span>
+            <span class="promo-card-badge">TOP</span>
           </div>
           <div class="promo-card-content">
             <h3>Combo de Burro + Nachos + Gaseosa</h3>
             <p>Burro con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Elige Pollo, Al Pastor o Birria en cada preparación.</p>
             <div class="promo-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROMO 2: Quesadilla + Nachos + Gaseosa de 400 ml -->
+        <!-- COMBO 2 -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
-            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa de 400 ml" class="promo-card-img">
-            <span class="promo-card-badge">⭐ NUEVO</span>
+            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa" class="promo-card-img">
+            <span class="promo-card-badge">NUEVO</span>
           </div>
           <div class="promo-card-content">
             <h3>Quesadilla + Nachos + Gaseosa</h3>
             <p>Quesadilla con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Combina Pollo, Al Pastor o Birria como prefieras.</p>
             <div class="promo-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROMO 3: Tacos x 3 + Nachos + Gaseosa -->
+        <!-- COMBO 3 -->
         <div class="promo-card-custom">
           <div class="promo-card-img-wrapper">
             <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="promo-card-img">
-            <span class="promo-card-badge">🌮 FAVORITO</span>
+            <span class="promo-card-badge">FAVORITO</span>
           </div>
           <div class="promo-card-content">
             <h3>Tacos x 3 + Nachos + Gaseosa</h3>
             <p>3 tacos (pueden ser mixtos o de tu proteína favorita) + nachos gratinados con proteína a elección + gaseosa de 400 ml. ¡Mucho sabor mexicano!</p>
             <div class="promo-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1410,7 +1417,7 @@
                 <p>Cerveza bien fría en lata de 473 ml, ideal para acompañar tus tacos.</p>
                 <div class="menu-card-footer">
                   <div class="price">$10.000<small>Lata 473 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light%20%F0%9F%8D%BA" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1430,7 +1437,7 @@
                 <p>El auténtico toque mexicano para tus platos con limón bien frío.</p>
                 <div class="menu-card-footer">
                   <div class="price">$10.000<small>Botella 210 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20Coronita%20%F0%9F%8D%BA" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20Coronita" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1450,7 +1457,7 @@
                 <p>Refrescante sabor original bien helado para cualquier comida.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1470,7 +1477,7 @@
                 <p>Refrescante sabor a toronja, la combinación preferida de los combos.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Quatro%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Quatro" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1490,7 +1497,7 @@
                 <p>Sabor fresco y burbujeante lima-limón para refrescar tu paladar.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Sprite%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Sprite" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1510,7 +1517,7 @@
                 <p>La clásica gaseosa de manzana rosada colombiana bien helada.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Manzana%20Postob%C3%B3n%20%F0%9F%A5%A4" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Manzana%20Postob%C3%B3n" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1530,7 +1537,7 @@
                 <p>Agua pura y fresca sin gas para hidratarte al máximo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$4.000<small>Botella 600 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Agua%20Cristal%20%F0%9F%92%A7" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Agua%20Cristal" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1550,7 +1557,7 @@
                 <p>Preparado al instante con pulpa fresca en agua o en leche.</p>
                 <div class="menu-card-footer">
                   <div class="price">$7.000<small>Vaso 16 oz</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Mango%20%F0%9F%8D%AD" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Mango" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1570,7 +1577,7 @@
                 <p>Delicioso jugo natural de fresas frescas en agua o en leche.</p>
                 <div class="menu-card-footer">
                   <div class="price">$7.000<small>Vaso 16 oz</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Fresa%20%F0%9F%8D%93" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Fresa" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1590,7 +1597,7 @@
                 <p>El balance perfecto entre dulce y ácido con fruta 100% fresca.</p>
                 <div class="menu-card-footer">
                   <div class="price">$7.000<small>Vaso 16 oz</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Maracuy%C3%A1%20%F0%9F%A5%AD" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Maracuy%C3%A1" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1610,7 +1617,7 @@
                 <p>Exprimida al instante con limón fresco, hielo y toque de la casa.</p>
                 <div class="menu-card-footer">
                   <div class="price">$7.000<small>Vaso 16 oz</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Limonada%20Natural%20%F0%9F%8D%8B" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Limonada%20Natural" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1622,6 +1629,55 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (ABAJO DEL MENÚ - LOS 2 COMBOS ORIGINALES) ========== -->
+<section class="exclusive-promo-section" id="promos-especiales">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">🎉 Promos Especiales</span>
+      <h2 class="section-title">Combos <span class="highlight">Imperdibles</span> 🌮🔥</h2>
+      <p class="section-subtitle">¡Aprovecha nuestras ofertas especiales llenas de sabor mexicano para disfrutar al máximo!</p>
+    </div>
+
+    <div class="promo-grid-original">
+      <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+      <div class="promo-card-custom">
+        <div class="promo-card-img-wrapper">
+          <img src="superpromo30.png" alt="Súper Promo TacoBons" class="promo-card-img">
+          <span class="promo-card-badge">🔥 TOP</span>
+        </div>
+        <div class="promo-card-content">
+          <h3>Súper Promo TacoBons</h3>
+          <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
+          <div class="promo-card-footer">
+            <div class="price">$45.000<small>$60.000</small></div>
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
+              Pedir <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+      <div class="promo-card-custom">
+        <div class="promo-card-img-wrapper">
+          <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos" class="promo-card-img">
+          <span class="promo-card-badge">⭐ NUEVO</span>
+        </div>
+        <div class="promo-card-content">
+          <h3>Combo Tacos Mixtos</h3>
+          <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, ¡más una refrescante gaseosa Quatro!</p>
+          <div class="promo-card-footer">
+            <div class="price">$30.000<small>$38.000</small></div>
+            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000" target="_blank" rel="noopener" class="btn-promo-card">
+              Pedir <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1783,7 +1839,7 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-visual .protein-card').readys?.forEach || document.querySelectorAll('.menu-card, .promo-card-custom, .info-card, .hero-visual .protein-card').forEach(el => {
+  document.querySelectorAll('.menu-card, .promo-card-custom, .location-section, .info-card, .hero-visual .protein-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
