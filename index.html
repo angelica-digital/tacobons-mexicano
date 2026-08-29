@@ -367,18 +367,21 @@
     letter-spacing: 0.5px;
   }
 
-  /* ========== IMAGEN HERO (MARIA ANGELICA CEO 1200x900 -> 4/3) ========== */
+  /* ========== IMAGEN HERO (FORMATO VERTICAL 1080x1350 -> 4/5) ========== */
   .hero-image-wrapper {
     position: relative;
-    max-width: 480px;
+    max-width: 420px;
     margin: 0 auto;
     border-radius: 28px;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 5;
     border: 2px solid var(--logo-green);
     box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(52, 215, 7, 0.3);
     transition: transform 0.4s ease;
     background: #0A0604;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-image-wrapper:hover {
@@ -390,7 +393,7 @@
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: cover; /* Mantiene la proporción vertical completa de 1080x1350 */
   }
 
   /* ========== SECCIONES GENERALES ========== */
@@ -1139,7 +1142,7 @@
 </head>
 <body>
 
-<!-- ========== NAVBAR (CON ENLACE A PROMO COMBOS) ========== -->
+<!-- ========== NAVBAR ========== -->
 <nav class="navbar">
   <div class="navbar-inner">
     <ul class="nav-links">
@@ -1155,7 +1158,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO (CON mariaangelicaceo.png) ========== -->
+<!-- ========== HERO ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1194,9 +1197,9 @@
       </div>
     </div>
 
-    <!-- IMAGEN REAL DE MARIA ANGELICA CEO (1200x900) -->
+    <!-- IMAGEN COMPLETA EN FORMATO VERTICAL 1080x1350 (4/5) -->
     <div class="hero-image-wrapper">
-      <img src="mariaangelicaceo.png" alt="TacoBons - Sabor Mexicano Auténtico">
+      <img src="mariaangelicaceo.png" alt="TacoBons - Sabor Mexicano Auténtico" style="object-fit: contain; background: #0A0604;">
     </div>
   </div>
 </section>
