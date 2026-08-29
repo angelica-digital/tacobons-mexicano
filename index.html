@@ -663,14 +663,14 @@
     color: white;
   }
 
-  /* ========== CARDS TRES COMBOS EN LA PESTAÑA (3 COLUMNAS LADO A LADO) ========== */
+  /* ========== CARDS TRES COMBOS EN LA PESTAÑA (3 COLUMNAS Y FORMATO VERTICAL 1080x1350 -> 4/5) ========== */
   .combos-tab-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
   }
 
-  /* CARDS PROMO EXCLUSIVAS (ABAJO - 2 ORIGINALES CON 1200x900 SIN CORTES) ========== */
+  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - 2 ORIGINALES 1200x900) ========== */
   .exclusive-promo-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.15) 0%, transparent 40%),
@@ -709,7 +709,7 @@
   .promo-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3; /* Formato 1200x900 sin recortes */
+    aspect-ratio: 4 / 3;
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -720,7 +720,7 @@
   .promo-card-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Imagen completa asegurada */
+    object-fit: contain;
     transition: transform 0.5s ease;
   }
 
@@ -1349,13 +1349,13 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS (TUS 3 NUEVOS COMBOS LADO A LADO) -->
+    <!-- ABA 2: PROMO COMBOS (TUS 3 NUEVOS COMBOS CON FORMATO VERTICAL 1080x1350 -> aspect-ratio 4/5) -->
     <div id="tab-combos" class="tab-pane">
       <div class="combos-tab-grid">
         <!-- COMBO 1 -->
         <div class="menu-card">
-          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-            <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
+            <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="menu-card-img" style="object-fit: cover;">
             <span class="menu-card-badge">TOP</span>
           </div>
           <div class="menu-card-content">
@@ -1372,8 +1372,8 @@
 
         <!-- COMBO 2 -->
         <div class="menu-card">
-          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
+            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa" class="menu-card-img" style="object-fit: cover;">
             <span class="menu-card-badge">NUEVO</span>
           </div>
           <div class="menu-card-content">
@@ -1390,8 +1390,8 @@
 
         <!-- COMBO 3 -->
         <div class="menu-card">
-          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-            <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
+            <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="menu-card-img" style="object-fit: cover;">
             <span class="menu-card-badge">FAVORITO</span>
           </div>
           <div class="menu-card-content">
