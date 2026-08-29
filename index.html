@@ -367,33 +367,60 @@
     letter-spacing: 0.5px;
   }
 
-  /* ========== IMAGEN HERO (FORMATO VERTICAL 1080x1350 -> 4/5) ========== */
+  /* ========== CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO Y EMOJIS FLOTANTES ========== */
   .hero-image-wrapper {
     position: relative;
     max-width: 420px;
     margin: 0 auto;
     border-radius: 28px;
-    overflow: hidden;
+    overflow: visible; /* Permite que los emojis floten fuera de la tarjeta */
     aspect-ratio: 4 / 5;
-    border: 2px solid var(--logo-green);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(52, 215, 7, 0.3);
-    transition: transform 0.4s ease;
-    background: #0A0604;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* Borde traslúcido y sutil brillo neón profesional */
+    border: 2px solid rgba(52, 215, 7, 0.4);
+    background: rgba(26, 16, 12, 0.6);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 30px rgba(52, 215, 7, 0.15);
+    transition: all 0.4s ease;
   }
 
   .hero-image-wrapper:hover {
     transform: scale(1.02);
-    border-color: var(--logo-yellow);
+    border-color: rgba(253, 214, 3, 0.6);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(253, 214, 3, 0.25);
   }
 
   .hero-image-wrapper img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover; /* Mantiene la proporción vertical completa de 1080x1350 */
+    object-fit: cover;
+    border-radius: 26px;
+  }
+
+  /* Emojis flotantes decorativos alrededor de la tarjeta */
+  .floating-emoji {
+    position: absolute;
+    font-size: 32px;
+    z-index: 5;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    animation: float-emoji 3s ease-in-out infinite;
+  }
+
+  .emoji-taco {
+    top: -15px;
+    left: -20px;
+    animation-delay: 0s;
+  }
+
+  .emoji-burrito {
+    bottom: -15px;
+    right: -20px;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes float-emoji {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(6deg); }
   }
 
   /* ========== SECCIONES GENERALES ========== */
@@ -648,7 +675,7 @@
     gap: 28px;
   }
 
-  /* ========== CARDS PROMO EXCLUSIVAS (ABAJO - ETIQUETAS ROSAS Y CENTRADAS) ========== */
+  /* ========== CARDS PROMO EXCLUSIVAS ========== */
   .exclusive-promo-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.15) 0%, transparent 40%),
@@ -789,7 +816,7 @@
     background: white;
   }
 
-  /* ========== CARROSSEL FLUIDO DE BEBIDAS (SIN BARRA ROSA) ========== */
+  /* ========== CARROSSEL FLUIDO DE BEBIDAS ========== */
   .carousel-container {
     position: relative;
     width: 100%;
@@ -1158,7 +1185,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO ========== -->
+<!-- ========== HERO (CON FOTO Y BORDE TRASLÚCIDO + EMOJIS FLOTANTES) ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1197,9 +1224,11 @@
       </div>
     </div>
 
-    <!-- IMAGEN COMPLETA EN FORMATO VERTICAL 1080x1350 (4/5) -->
+    <!-- CONTENEDOR DE LA IMAGEN CON BORDE TRASLÚCIDO Y EMOJIS -->
     <div class="hero-image-wrapper">
-      <img src="mariaangelicaceo.png" alt="TacoBons - Sabor Mexicano Auténtico" style="object-fit: contain; background: #0A0604;">
+      <span class="floating-emoji emoji-taco">🌮</span>
+      <span class="floating-emoji emoji-burrito">🌯</span>
+      <img src="mariaangelicaceo.png" alt="TacoBons - Sabor Mexicano Auténtico" style="object-fit: cover;">
     </div>
   </div>
 </section>
