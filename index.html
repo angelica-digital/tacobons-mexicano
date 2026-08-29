@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* ========== RESET & VARIABLES (EQUILIBRIO EXACTO: VERDE #34D707, AMARILLO #FDD603 Y ROSA #FD0C79) ========== */
+  /* ========== RESET & VARIABLES ========== */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -366,7 +366,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* Tarjetas proteínas hero con los 3 colores (Verde, Amarillo, Rosa) */
+  /* Tarjetas proteínas hero */
   .hero-visual {
     position: relative;
     display: grid;
@@ -595,45 +595,40 @@
     color: white;
   }
 
-  /* ========== PROMOS (SÚPER PROMO TACOBONS) ========== */
+  /* ========== PROMOS & COMBOS GRID ========== */
   .promo-section {
     background:
       radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
       var(--bg-dark);
   }
 
+  .promo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .promo-banner {
     background: linear-gradient(135deg, var(--logo-pink) 0%, var(--logo-green) 50%, var(--logo-yellow) 100%);
     border-radius: 28px;
-    padding: 60px 50px;
+    padding: 50px 40px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 25px 60px rgba(253, 12, 121, 0.3);
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
     align-items: center;
   }
 
   .promo-banner::before {
     content: '🔥';
     position: absolute;
-    font-size: 240px;
-    top: -40px;
-    right: -20px;
+    font-size: 200px;
+    top: -30px;
+    right: -10px;
     opacity: 0.15;
     transform: rotate(20deg);
-  }
-
-  .promo-banner::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(52, 215, 7, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-    bottom: -150px;
-    left: -100px;
   }
 
   .promo-tag {
@@ -646,16 +641,16 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     position: relative;
     z-index: 2;
   }
 
   .promo-banner h2 {
-    font-size: clamp(26px, 3.8vw, 42px);
+    font-size: clamp(24px, 3.2vw, 38px);
     color: #120D0A;
     font-weight: 900;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     position: relative;
     z-index: 2;
     line-height: 1.1;
@@ -663,21 +658,20 @@
 
   .promo-banner p {
     color: #1A100C;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
     position: relative;
     z-index: 2;
-    max-width: 500px;
   }
 
   .promo-price {
     background: rgba(18, 13, 10, 0.8);
     border: 2px dashed var(--logo-yellow);
     border-radius: 14px;
-    padding: 16px 22px;
+    padding: 14px 20px;
     display: inline-block;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 2;
   }
@@ -685,7 +679,7 @@
   .promo-price .old {
     text-decoration: line-through;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 12px;
     font-weight: 600;
   }
@@ -693,7 +687,7 @@
   .promo-price .now {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 28px;
     color: var(--logo-yellow);
   }
 
@@ -705,7 +699,7 @@
 
   .promo-image img {
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     max-width: 100%;
     height: auto;
   }
@@ -713,10 +707,10 @@
   .btn-promo {
     background: #120D0A;
     color: var(--logo-yellow);
-    padding: 18px 32px;
+    padding: 16px 28px;
     border-radius: 50px;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 15px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -1185,31 +1179,54 @@
   </div>
 </section>
 
-<!-- ========== PROMOS (SÚPER PROMO TACOBONS) ========== -->
+<!-- ========== PROMOS & COMBOS ========== -->
 <section class="promo-section" id="combos">
   <div class="section-container">
     <div class="section-header">
-      <span class="section-tag">🎉 Promo Especial</span>
-      <h2 class="section-title">Súper Promo <span class="highlight">TacoBons</span> 🌮🔥</h2>
-      <p class="section-subtitle">¡Tres tacos, tres proteínas y mucho sabor mexicano para disfrutar al máximo!</p>
+      <span class="section-tag">🎉 Promos Especiales</span>
+      <h2 class="section-title">Combos <span class="highlight">Imperdibles</span> 🌮🔥</h2>
+      <p class="section-subtitle">¡Aprovecha nuestras ofertas especiales llenas de sabor mexicano para disfrutar al máximo!</p>
     </div>
 
-    <div class="promo-banner">
-      <div class="promo-content">
-        <span class="promo-tag">🔥 Oferta Especial</span>
-        <h2>🌮 ¡SÚPER PROMO TACOBONS! 🥤</h2>
-        <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor (cerdo con piña) y birria (res), ¡más una refrescante gaseosa Quatro!</p>
-        <div class="promo-price">
-          <span class="old">$60.000</span>
-          <span class="now">$45.000</span>
+    <div class="promo-grid">
+      <!-- PROMO 1: Súper Promo TacoBons ($45.000) -->
+      <div class="promo-banner">
+        <div class="promo-content">
+          <span class="promo-tag">🔥 Oferta Especial</span>
+          <h2>🌮 ¡SÚPER PROMO TACOBONS! 🥤</h2>
+          <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
+          <div class="promo-price">
+            <span class="old">$60.000</span>
+            <span class="now">$45.000</span>
+          </div>
+          <br>
+          <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-promo">
+            <i class="fab fa-whatsapp"></i> Pedir Promo por WhatsApp
+          </a>
         </div>
-        <br>
-        <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20TacoBons%20de%20%2445.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo">
-          <i class="fab fa-whatsapp"></i> Pedir Promo por WhatsApp
-        </a>
+        <div class="promo-image">
+          <img src="superpromo30.png" alt="Súper Promo TacoBons - 45.000">
+        </div>
       </div>
-      <div class="promo-image">
-        <img src="superpromo30.png" alt="Súper Promo TacoBons - Tacos y Gaseosa">
+
+      <!-- PROMO 2: Combo Tacos Mixtos ($30.000) -->
+      <div class="promo-banner">
+        <div class="promo-content">
+          <span class="promo-tag">⭐ Nuevo Combo</span>
+          <h2>🌮 COMBO TACOS MIXTOS 🥤</h2>
+          <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor (cerdo con piña) y birria (res), ¡más una refrescante gaseosa Quatro!</p>
+          <div class="promo-price">
+            <span class="old">$38.000</span>
+            <span class="now">$30.000</span>
+          </div>
+          <br>
+          <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000%20%F0%9F%8C%AE%F0%9F%a4%a4" target="_blank" rel="noopener" class="btn-promo">
+            <i class="fab fa-whatsapp"></i> Pedir Combo por WhatsApp
+          </a>
+        </div>
+        <div class="promo-image">
+          <img src="combotacosmixtos.png" alt="Combo Tacos Mixtos - 30.000">
+        </div>
       </div>
     </div>
   </div>
