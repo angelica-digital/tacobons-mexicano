@@ -395,8 +395,8 @@
 
   .protein-card:hover {
     transform: translateY(-6px);
-    border-color: var(--logo-green);
-    box-shadow: var(--shadow-glow);
+    border-color: var(--logo-pink);
+    box-shadow: 0 0 35px rgba(253, 12, 121, 0.3);
   }
 
   .protein-emoji {
@@ -595,7 +595,7 @@
     color: white;
   }
 
-  /* ========== PROMOS & COMBOS (ESTILO CARDS CON IMÁGENES COMPLETAS 1200x900) ========== */
+  /* ========== PROMOS & COMBOS (BORDAS ROSAS Y PROPORCIÓN 1200x900) ========== */
   .promo-section {
     background:
       radial-gradient(ellipse at center, rgba(253, 12, 121, 0.08) 0%, transparent 60%),
@@ -612,18 +612,18 @@
     background: var(--bg-card);
     border-radius: 26px;
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 2px solid var(--logo-pink); /* Bordas en color rosa de la marca */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(253, 12, 121, 0.2);
   }
 
   .promo-card-custom:hover {
     transform: translateY(-8px);
-    border-color: var(--logo-green);
-    box-shadow: 0 25px 60px rgba(52, 215, 7, 0.3);
+    border-color: var(--logo-yellow);
+    box-shadow: 0 25px 60px rgba(253, 12, 121, 0.4), 0 0 30px rgba(253, 214, 3, 0.3);
   }
 
   .promo-card-img-wrapper {
@@ -689,7 +689,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    border-top: 1px dashed var(--border);
+    border-top: 1px dashed rgba(253, 12, 121, 0.3);
     gap: 12px;
   }
 
@@ -726,7 +726,7 @@
 
   .btn-promo-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 215, 7, 0.5);
+    box-shadow: 0 6px 20px rgba(253, 12, 121, 0.4);
     background: white;
   }
 
@@ -1178,7 +1178,7 @@
   </div>
 </section>
 
-<!-- ========== PROMOS & COMBOS (IMÁGENES COMPLETAS SIN RECORTES) ========== -->
+<!-- ========== PROMOS & COMBOS (BORDAS ROSAS Y PROPORCIÓN 1200x900) ========== -->
 <section class="promo-section" id="combos">
   <div class="section-container">
     <div class="section-header">
