@@ -468,16 +468,15 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - YA NO ES STICKY ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
     margin-bottom: 45px;
     flex-wrap: wrap;
-    position: sticky;
-    top: 70px;
-    z-index: 100;
+    position: relative; /* Cambiado de sticky a relative para que suba y baje normal con la página */
+    z-index: 10;
     background: rgba(18, 13, 10, 0.92);
     backdrop-filter: blur(10px);
     padding: 14px 10px;
@@ -810,7 +809,7 @@
     background: white;
   }
 
-  /* ========== CARROSSEL FLUIDO DE BEBIDAS (SIN BARRA ROSA / OCULTAR SCROLLBAR) ========== */
+  /* ========== CARROSSEL FLUIDO DE BEBIDAS (SIN BARRA ROSA) ========== */
   .carousel-container {
     position: relative;
     width: 100%;
@@ -824,13 +823,12 @@
     scroll-behavior: smooth;
     padding: 15px 5px 25px 5px;
     -webkit-overflow-scrolling: touch;
-    /* Ocultar barra de desplazamiento en todos los navegadores */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   .carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari y Opera */
+    display: none;
   }
 
   .carousel-item {
@@ -1250,7 +1248,7 @@
       <p class="section-subtitle">Selecciona una categoría para explorar nuestros platos tradicionales, combos imperdibles y bebidas.</p>
     </div>
 
-    <!-- NAVEGACIÓN DE ABAS (TABS) -->
+    <!-- NAVEGACIÓN DE ABAS (TABS) - AHORA ESTÁTICA Y NORMAL -->
     <div class="menu-tabs-wrapper">
       <button class="menu-tab-btn active" onclick="openTab(event, 'tab-platos')">
         <i class="fas fa-utensils"></i> Platos Mexicanos
@@ -1399,7 +1397,7 @@
       </div>
     </div>
 
-    <!-- ABA 3: JUGOS & BEBIDAS (11 BEBIDAS CON DATOS Y TAMAÑOS EXACTOS) -->
+    <!-- ABA 3: JUGOS & BEBIDAS -->
     <div id="tab-bebidas" class="tab-pane">
       <div class="carousel-container">
         <button class="carousel-nav-btn carousel-prev" onclick="scrollCarousel(-1)" aria-label="Anterior">
@@ -1410,7 +1408,7 @@
         </button>
 
         <div class="carousel-track" id="drinksCarousel">
-          <!-- Bebida 1: Águila Light -->
+          <!-- Bebida 1 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1430,7 +1428,7 @@
             </div>
           </div>
 
-          <!-- Bebida 2: Gaseosa Quatro Toronja -->
+          <!-- Bebida 2 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1450,7 +1448,7 @@
             </div>
           </div>
 
-          <!-- Bebida 3: Agua Pool con Gas -->
+          <!-- Bebida 3 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1470,7 +1468,7 @@
             </div>
           </div>
 
-          <!-- Bebida 4: Jugo Hit de Mango -->
+          <!-- Bebida 4 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1490,7 +1488,7 @@
             </div>
           </div>
 
-          <!-- Bebida 5: Jugo Hit de Mora -->
+          <!-- Bebida 5 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1510,7 +1508,7 @@
             </div>
           </div>
 
-          <!-- Bebida 6: Jugo Hit Naranja Piña -->
+          <!-- Bebida 6 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1530,7 +1528,7 @@
             </div>
           </div>
 
-          <!-- Bebida 7: Gaseosa Coca-Cola Personal -->
+          <!-- Bebida 7 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1550,7 +1548,7 @@
             </div>
           </div>
 
-          <!-- Bebida 8: Jugo Hit de Lulo -->
+          <!-- Bebida 8 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1570,7 +1568,7 @@
             </div>
           </div>
 
-          <!-- Bebida 9: Jugo Hit Frutas Tropicales -->
+          <!-- Bebida 9 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1590,7 +1588,7 @@
             </div>
           </div>
 
-          <!-- Bebida 10: Agua Pool sin Gas -->
+          <!-- Bebida 10 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
@@ -1610,7 +1608,7 @@
             </div>
           </div>
 
-          <!-- Bebida 11: Coca-Cola Familiar -->
+          <!-- Bebida 11 -->
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 5;">
