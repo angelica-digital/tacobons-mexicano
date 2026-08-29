@@ -468,14 +468,14 @@
     margin: 0 auto;
   }
 
-  /* ========== SISTEMA DE ABAS (MENU TABS) - YA NO ES STICKY ========== */
+  /* ========== SISTEMA DE ABAS (MENU TABS) - ESTÁTICO CON ESPACIO CORRECTO ========== */
   .menu-tabs-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 45px;
+    margin-bottom: 45px; /* Margen inferior añadido para separar las tarjetas */
     flex-wrap: wrap;
-    position: relative; /* Cambiado de sticky a relative para que suba y baje normal con la página */
+    position: relative;
     z-index: 10;
     background: rgba(18, 13, 10, 0.92);
     backdrop-filter: blur(10px);
@@ -1248,7 +1248,7 @@
       <p class="section-subtitle">Selecciona una categoría para explorar nuestros platos tradicionales, combos imperdibles y bebidas.</p>
     </div>
 
-    <!-- NAVEGACIÓN DE ABAS (TABS) - AHORA ESTÁTICA Y NORMAL -->
+    <!-- NAVEGACIÓN DE ABAS (TABS) -->
     <div class="menu-tabs-wrapper">
       <button class="menu-tab-btn active" onclick="openTab(event, 'tab-platos')">
         <i class="fas fa-utensils"></i> Platos Mexicanos
