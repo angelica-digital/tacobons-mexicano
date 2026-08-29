@@ -663,7 +663,14 @@
     color: white;
   }
 
-  /* ========== CARDS PROMO EXCLUSIVAS (CON FONDO DEGRADADO Y GLOW ROSA/VERDE) ========== */
+  /* ========== CARDS TRES COMBOS EN LA PESTAÑA (3 COLUMNAS LADO A LADO) ========== */
+  .combos-tab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  /* CARDS PROMO EXCLUSIVAS (ABAJO - 2 ORIGINALES CON 1200x900 SIN CORTES) ========== */
   .exclusive-promo-section {
     background: 
       radial-gradient(circle at 10% 20%, rgba(253, 12, 121, 0.15) 0%, transparent 40%),
@@ -702,7 +709,7 @@
   .promo-card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3; /* Proporción 1200x900 sin recortes */
+    aspect-ratio: 4 / 3; /* Formato 1200x900 sin recortes */
     background: #0A0604;
     overflow: hidden;
     display: flex;
@@ -1119,6 +1126,12 @@
   }
 
   /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    .combos-tab-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+
   @media (max-width: 968px) {
     body { padding-top: 56px; }
     .navbar { padding: 8px 0; }
@@ -1336,21 +1349,21 @@
       </div>
     </div>
 
-    <!-- ABA 2: PROMO COMBOS (TUS 3 NUEVOS COMBOS) -->
+    <!-- ABA 2: PROMO COMBOS (TUS 3 NUEVOS COMBOS LADO A LADO) -->
     <div id="tab-combos" class="tab-pane">
-      <div class="promo-grid">
+      <div class="combos-tab-grid">
         <!-- COMBO 1 -->
-        <div class="promo-card-custom">
-          <div class="promo-card-img-wrapper">
-            <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="promo-card-img">
-            <span class="promo-card-badge">TOP</span>
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="combodeburro+nachos+gaseosa.png" alt="Combo de Burro + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+            <span class="menu-card-badge">TOP</span>
           </div>
-          <div class="promo-card-content">
+          <div class="menu-card-content">
             <h3>Combo de Burro + Nachos + Gaseosa</h3>
             <p>Burro con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Elige Pollo, Al Pastor o Birria en cada preparación.</p>
-            <div class="promo-card-footer">
+            <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1358,17 +1371,17 @@
         </div>
 
         <!-- COMBO 2 -->
-        <div class="promo-card-custom">
-          <div class="promo-card-img-wrapper">
-            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa" class="promo-card-img">
-            <span class="promo-card-badge">NUEVO</span>
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="quesadillas+nachos+gaseosade400ml.png" alt="Quesadilla + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+            <span class="menu-card-badge">NUEVO</span>
           </div>
-          <div class="promo-card-content">
+          <div class="menu-card-content">
             <h3>Quesadilla + Nachos + Gaseosa</h3>
             <p>Quesadilla con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Combina Pollo, Al Pastor o Birria como prefieras.</p>
-            <div class="promo-card-footer">
+            <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1376,17 +1389,17 @@
         </div>
 
         <!-- COMBO 3 -->
-        <div class="promo-card-custom">
-          <div class="promo-card-img-wrapper">
-            <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="promo-card-img">
-            <span class="promo-card-badge">FAVORITO</span>
+        <div class="menu-card">
+          <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
+            <img src="tacosx3+nachos+gaseosa.png" alt="Tacos x 3 + Nachos + Gaseosa" class="menu-card-img" style="object-fit: contain;">
+            <span class="menu-card-badge">FAVORITO</span>
           </div>
-          <div class="promo-card-content">
+          <div class="menu-card-content">
             <h3>Tacos x 3 + Nachos + Gaseosa</h3>
             <p>3 tacos (pueden ser mixtos o de tu proteína favorita) + nachos gratinados con proteína a elección + gaseosa de 400 ml. ¡Mucho sabor mexicano!</p>
-            <div class="promo-card-footer">
+            <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
+              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1410,7 +1423,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="aguilalight.png" alt="Cerveza Águila Light" class="menu-card-img">
+                <img src="aguilalight.png" alt="Cerveza Águila Light" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Cerveza</span>
               </div>
               <div class="menu-card-content">
@@ -1430,7 +1443,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="coronita.png" alt="Cerveza Coronita" class="menu-card-img">
+                <img src="coronita.png" alt="Cerveza Coronita" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Mexicana</span>
               </div>
               <div class="menu-card-content">
@@ -1450,7 +1463,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="cocacola.png" alt="Coca-Cola Personal" class="menu-card-img">
+                <img src="cocacola.png" alt="Coca-Cola Personal" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Clásica</span>
               </div>
               <div class="menu-card-content">
@@ -1470,7 +1483,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="quatro.png" alt="Gaseosa Quatro" class="menu-card-img">
+                <img src="quatro.png" alt="Gaseosa Quatro" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Cítrica</span>
               </div>
               <div class="menu-card-content">
@@ -1490,7 +1503,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="sprite.png" alt="Gaseosa Sprite" class="menu-card-img">
+                <img src="sprite.png" alt="Gaseosa Sprite" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Lima-Limón</span>
               </div>
               <div class="menu-card-content">
@@ -1510,7 +1523,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="manzanapostobon.png" alt="Manzana Postobón" class="menu-card-img">
+                <img src="manzanapostobon.png" alt="Manzana Postobón" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Tradicional</span>
               </div>
               <div class="menu-card-content">
@@ -1530,7 +1543,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="aguamineral.png" alt="Agua Mineral" class="menu-card-img">
+                <img src="aguamineral.png" alt="Agua Mineral" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Pura</span>
               </div>
               <div class="menu-card-content">
@@ -1550,7 +1563,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="jugomango.png" alt="Jugo de Mango" class="menu-card-img">
+                <img src="jugomango.png" alt="Jugo de Mango" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">100% Natural</span>
               </div>
               <div class="menu-card-content">
@@ -1570,7 +1583,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="jugofresa.png" alt="Jugo de Fresa" class="menu-card-img">
+                <img src="jugofresa.png" alt="Jugo de Fresa" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">100% Natural</span>
               </div>
               <div class="menu-card-content">
@@ -1590,7 +1603,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="jugomaracuya.png" alt="Jugo de Maracuyá" class="menu-card-img">
+                <img src="jugomaracuya.png" alt="Jugo de Maracuyá" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Cítrico</span>
               </div>
               <div class="menu-card-content">
@@ -1610,7 +1623,7 @@
           <div class="carousel-item">
             <div class="menu-card">
               <div class="menu-card-img-wrapper" style="aspect-ratio: 4 / 3;">
-                <img src="limonadanatural.png" alt="Limonada Natural" class="menu-card-img">
+                <img src="limonadanatural.png" alt="Limonada Natural" class="menu-card-img" style="object-fit: contain;">
                 <span class="menu-card-badge">Favorita</span>
               </div>
               <div class="menu-card-content">
@@ -1633,7 +1646,7 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (CON EL FONDO DEGRADADO ESTILO EJEMPLO) ========== -->
+<!-- ========== SECCIÓN DE PROMOS EXCLUSIVAS (LOS 2 COMBOS ORIGINALES) ========== -->
 <section class="exclusive-promo-section" id="promos-especiales">
   <div class="section-container">
     <div class="section-header">
