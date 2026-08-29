@@ -260,7 +260,6 @@
     line-height: 1.1;
   }
 
-  /* EFECTO DE LUZ/ROSA PASANDO EN VIVO SOBRE EL TEXTO */
   .hero h1 .highlight {
     background: linear-gradient(90deg, var(--logo-green) 0%, var(--logo-yellow) 35%, var(--logo-pink) 50%, var(--logo-yellow) 65%, var(--logo-green) 100%);
     background-size: 200% auto;
@@ -481,6 +480,13 @@
     margin: 0 auto;
   }
 
+  /* ========== SECCIÓN MENÚ CON FONDO DEGRADADO PERSONALIZADO (#FD8B2F + #FD405B) ========== */
+  .menu-section {
+    background: linear-gradient(135deg, rgba(253, 139, 47, 0.12) 0%, rgba(18, 13, 10, 0.95) 45%, rgba(253, 64, 91, 0.12) 100%), var(--bg-dark);
+    border-top: 1px solid rgba(253, 139, 47, 0.3);
+    border-bottom: 1px solid rgba(253, 64, 91, 0.3);
+  }
+
   /* ========== SISTEMA DE ABAS (MENU TABS) ========== */
   .menu-tabs-wrapper {
     display: flex;
@@ -545,12 +551,6 @@
   }
 
   /* ========== CARDS DE PLATOS ========== */
-  .menu-section {
-    background: var(--bg-card);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
   .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1243,12 +1243,12 @@
   </div>
 </section>
 
-<!-- ========== SECCIÓN MENÚ CON ABAS (TABS) ========== -->
+<!-- ========== SECCIÓN MENÚ CON FONDO DEGRADADO PERSONALIZADO (#FD8B2F + #FD405B) ========== -->
 <section class="menu-section" id="menu">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">⭐ Menú & Promociones</span>
-      <h2 class="section-title">Nuestro <span class="highlight">Menú Digital</span></h2>
+      <h2 class="section-title">Nuestro <span class="highlight">Menú Digital</span> 🌮🔥</h2>
       <p class="section-subtitle">Selecciona una categoría para explorar nuestros platos tradicionales, combos imperdibles y bebidas.</p>
     </div>
 
