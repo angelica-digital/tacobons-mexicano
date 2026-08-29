@@ -100,13 +100,14 @@
 
   .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     list-style: none;
+    align-items: center;
   }
 
   .nav-links a {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text);
     position: relative;
     transition: color 0.3s ease;
@@ -366,56 +367,28 @@
     letter-spacing: 0.5px;
   }
 
-  /* Tarjetas proteínas hero */
-  .hero-visual {
+  /* ========== NUEVA IMAGEN HERO EN EL CUADRO AZUL ========== */
+  .hero-image-wrapper {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    max-width: 500px;
-    margin-left: auto;
-  }
-
-  .protein-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 18px 12px;
-    text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
+    max-width: 440px;
+    margin: 0 auto;
+    border-radius: 28px;
     overflow: hidden;
+    border: 2px solid var(--logo-green);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(52, 215, 7, 0.3);
+    transition: transform 0.4s ease;
   }
 
-  .protein-card:nth-child(1) { grid-row: span 2; padding: 28px 14px; background: linear-gradient(160deg, rgba(52, 215, 7, 0.18), var(--bg-card)); }
-  .protein-card:nth-child(2) { background: linear-gradient(160deg, rgba(253, 214, 3, 0.18), var(--bg-card)); }
-  .protein-card:nth-child(3) { background: linear-gradient(160deg, rgba(253, 12, 121, 0.18), var(--bg-card)); }
-  .protein-card:nth-child(4) { grid-column: span 2; background: linear-gradient(160deg, rgba(2, 166, 156, 0.18), var(--bg-card)); }
-
-  .protein-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--logo-pink);
-    box-shadow: 0 0 35px rgba(253, 12, 121, 0.3);
+  .hero-image-wrapper:hover {
+    transform: scale(1.02);
+    border-color: var(--logo-yellow);
   }
 
-  .protein-emoji {
-    font-size: 42px;
-    margin-bottom: 8px;
+  .hero-image-wrapper img {
+    width: 100%;
+    height: auto;
     display: block;
-  }
-
-  .protein-card:nth-child(1) .protein-emoji { font-size: 70px; }
-
-  .protein-card h4 {
-    font-size: 14px;
-    color: var(--cream);
-    margin-bottom: 4px;
-  }
-
-  .protein-card p {
-    font-size: 12px;
-    color: var(--text-muted);
+    object-fit: cover;
   }
 
   /* ========== SECCIONES GENERALES ========== */
@@ -583,7 +556,6 @@
     transform: scale(1.04);
   }
 
-  /* ETIQUETA EN ESQUINA INFERIOR IZQUIERDA PARA PLATOS Y BEBIDAS */
   .menu-card-badge {
     position: absolute;
     bottom: 14px;
@@ -729,7 +701,6 @@
     transform: scale(1.04);
   }
 
-  /* ETIQUETA ROSA Y CENTRADA ABAJO EN LAS DOS PROMOS EXCLUSIVAS */
   .promo-card-badge {
     position: absolute;
     bottom: 14px;
@@ -1169,12 +1140,13 @@
 </head>
 <body>
 
-<!-- ========== NAVBAR ========== -->
+<!-- ========== NAVBAR (CON ENLACE A PROMO COMBOS) ========== -->
 <nav class="navbar">
   <div class="navbar-inner">
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#menu">Menú Digital</a></li>
+      <li><a href="#promos-especiales">Promo Combos</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
     </ul>
     <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20domicilio%20%F0%9F%9B%97%F0%9F%8C%AE" class="nav-cta" target="_blank" rel="noopener">
@@ -1184,7 +1156,7 @@
   </div>
 </nav>
 
-<!-- ========== HERO ========== -->
+<!-- ========== HERO (CON FOTO REAL EN LUGAR DE ICONOS) ========== -->
 <section class="hero" id="inicio">
   <div class="hero-container">
     <div class="hero-content">
@@ -1223,27 +1195,9 @@
       </div>
     </div>
 
-    <div class="hero-visual">
-      <div class="protein-card">
-        <span class="protein-emoji">🌮</span>
-        <h4>Tacos</h4>
-        <p>3 Proteínas</p>
-      </div>
-      <div class="protein-card">
-        <span class="protein-emoji">🧀</span>
-        <h4>Quesadillas</h4>
-        <p>Fundidas</p>
-      </div>
-      <div class="protein-card">
-        <span class="protein-emoji">🌯</span>
-        <h4>Burritos</h4>
-        <p>Gigantes</p>
-      </div>
-      <div class="protein-card">
-        <span class="protein-emoji">🥑</span>
-        <h4>Nachos Explosivos</h4>
-        <p>Con Guacamole</p>
-      </div>
+    <!-- IMAGEN DE LA CHICA SONRIENDO CON SU SOMBRERO Y PRODUCTO -->
+    <div class="hero-image-wrapper">
+      <img src="image_faf43f.jpg" alt="TacoBons - Sabor Mexicano Auténtico">
     </div>
   </div>
 </section>
@@ -1465,7 +1419,7 @@
                 <span class="menu-card-badge">Pura</span>
               </div>
               <div class="menu-card-content">
-                <h3>Agua Pool sin Gas</h3>
+                <h3>Agua Pool con Gas</h3>
                 <p>Agua purificada con gas bien fría para hidratarte al máximo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
@@ -1605,7 +1559,7 @@
                 <span class="menu-card-badge">Pura</span>
               </div>
               <div class="menu-card-content">
-                <h3>Agua Pool con Gas</h3>
+                <h3>Agua Pool sin Gas</h3>
                 <p>Agua purificada fresca y ligera para acompañar cualquier momento.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
