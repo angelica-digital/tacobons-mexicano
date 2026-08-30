@@ -6,10 +6,12 @@
 <meta name="description" content="TacoBons - La verdadera comida mexicana en La Tebaida, Quindío. Tacos, Quesadillas, Burritos y Nachos con servicio a domicilio.">
 <title>TacoBons 🌮 | Comida Mexicana en La Tebaida - Domicilios</title>
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Bungee&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -57,7 +59,7 @@
     background-color: var(--bg-dark);
     color: var(--text);
     line-height: 1.6;
-    padding-top: 60px;
+    padding-top: 0; /* Sin espacio forzado arriba */
   }
 
   h1, h2, h3, h4 {
@@ -76,18 +78,13 @@
     display: block;
   }
 
-  /* ========== HEADER / NAVBAR ========== */
+  /* ========== HEADER / NAVBAR (SIN POSICIÓN FIJA / ESTÁTICO) ========== */
   .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative; /* Eliminado el fixed para que no sea estático ni flotante */
     width: 100%;
     background: rgba(18, 13, 10, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    z-index: 9999;
+    z-index: 999;
     padding: 10px 0;
     transition: all 0.3s ease;
   }
@@ -352,7 +349,7 @@
 
   .btn-whatsapp:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(52, 215, 7, 0.6);
+    box-shadow: 0 6px 32px rgba(52, 215, 7, 0.6);
   }
 
   .hero-stats {
@@ -1059,7 +1056,7 @@
     margin-bottom: 24px;
   }
 
-  .footer-social a {
+  .footer-social-icon {
     width: 44px;
     height: 44px;
     background: var(--bg-card);
@@ -1070,14 +1067,7 @@
     justify-content: center;
     color: var(--logo-pink);
     font-size: 18px;
-    transition: all 0.3s ease;
-  }
-
-  .footer-social a:hover {
-    background: var(--logo-pink);
-    color: white;
-    transform: translateY(-3px);
-    border-color: var(--logo-pink);
+    cursor: default;
   }
 
   .footer-logo-img {
@@ -1153,7 +1143,7 @@
     transform: scale(1.15);
   }
 
-  /* ========== RESPONSIVE ========== */
+  /* ========== RESPONSIVO ========== */
   @media (max-width: 1024px) {
     .combos-tab-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1161,7 +1151,7 @@
   }
 
   @media (max-width: 968px) {
-    body { padding-top: 56px; }
+    body { padding-top: 0; }
     .navbar { padding: 8px 0; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
@@ -1200,6 +1190,13 @@
 </head>
 <body>
 
+<!-- ========== BANNER SUPERIOR DE LA AGENCIA (ARRIBA DE TODO) ========== -->
+<div class="agency-banner">
+  <i class="fas fa-lightbulb"></i>
+  <span>Demo desarrollada por <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">Angélica Digital</a>. ¿Quieres una página web de alta conversión para tu restaurante?</span>
+</div>
+
+<!-- ========== NAVBAR / MENÚ PRINCIPAL (DEBAJO DEL BANNER) ========== -->
 <nav class="navbar">
   <div class="navbar-inner">
     <ul class="nav-links">
@@ -1208,7 +1205,7 @@
       <li><a href="#promos-especiales">Promo Combos</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
     </ul>
-    <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20domicilio%20%F0%9F%9B%97%F0%9F%8C%AE" class="nav-cta" target="_blank" rel="noopener">
+    <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" class="nav-cta" target="_blank" rel="noopener">
       <i class="fas fa-motorcycle"></i> Pedir Domicilio
     </a>
     <button class="menu-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
@@ -1235,7 +1232,7 @@
         <a href="#menu" class="btn btn-primary">
           <i class="fas fa-utensils"></i> Ver Menú Digital
         </a>
-        <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20ver%20el%20men%C3%BA%20completo%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn btn-whatsapp">
           <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
         </a>
       </div>
@@ -1295,7 +1292,7 @@
             <p>Llévate 3 deliciosos tacos. Elígelos de una sola proteína, mixtos o combinados: Pollo, Al Pastor o Birria. Acompañados de pico de gallo, guacamole y limón.</p>
             <div class="menu-card-footer">
               <div class="price">$27.000<small>3 Tacos + Acompañamientos</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Tacos%20Mexicanos%20x3%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1312,7 +1309,7 @@
             <p>Crujientes nachos de colores con queso gratinado, bien cargados de sabor y con tu proteína a elección: Pollo, Al Pastor o Birria.</p>
             <div class="menu-card-footer">
               <div class="price">$27.000<small>Para compartir</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20los%20Nachos%20Mexicanos%20Gratinados%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1329,7 +1326,7 @@
             <p>Grande, gordito y bien cargado con tortilla de 36 cm. Elige tu proteína favorita (Pollo, Al Pastor o Birria) o combínalas. Acompañado de guacamole y pico de gallo.</p>
             <div class="menu-card-footer">
               <div class="price">$27.000<small>Precio por unidad</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Burro%20Mexicano%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1346,7 +1343,7 @@
             <p>Tortilla de maíz de 36 cm, bien doradita y rellena con la proteína que quieras (Pollo, Al Pastor o Birria). Acompañada de guacamole y pico de gallo.</p>
             <div class="menu-card-footer">
               <div class="price">$27.000<small>Precio por unidad</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20Quesadilla%20Mexicana%20de%20%2427.000%20%F0%9F%8C%AE" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1367,7 +1364,7 @@
             <p>Burro con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Elige Pollo, Al Pastor o Birria en cada preparación.</p>
             <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Burro%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1384,7 +1381,7 @@
             <p>Quesadilla con proteína a elección + nachos gratinados con proteína a elección + gaseosa de 400 ml. Combina Pollo, Al Pastor o Birria como prefieras.</p>
             <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20de%20Quesadilla%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1401,7 +1398,7 @@
             <p>3 tacos (pueden ser mixtos o de tu proteína favorita) + nachos gratinados con proteína a elección + gaseosa de 400 ml. ¡Mucho sabor mexicano!</p>
             <div class="menu-card-footer">
               <div class="price">$45.000<small>$60.000</small></div>
-              <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20x3%20%2B%20Nachos%20%2B%20Gaseosa%20de%20%2445.000" target="_blank" rel="noopener" class="btn-card">
+              <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                 Pedir <i class="fas fa-arrow-right"></i>
               </a>
             </div>
@@ -1431,7 +1428,7 @@
                 <p>Refrescante sabor original bien helado para cualquier comida.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Personal" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1450,7 +1447,7 @@
                 <p>Refrescante sabor a toronja, la combinación preferida de los combos.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 400 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Gaseosa%20Quatro%20Toronja" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1469,7 +1466,7 @@
                 <p>Agua purificada con gas bien fría para hidratarte al máximo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Agua%20Pool%20con%20Gas" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1488,7 +1485,7 @@
                 <p>Delicioso néctar de mango refrescante.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20de%20Mango" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1507,7 +1504,7 @@
                 <p>Refrescante bebida con todo el sabor tradicional de la mora.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20de%20Mora" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1526,7 +1523,7 @@
                 <p>La combinación perfecta entre la naranja y la piña bien fría.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20Hit%20Naranja%20Pi%C3%B1a" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1545,7 +1542,7 @@
                 <p>Exótica mezcla de frutas tropicales seleccionadas bien frías.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Frutas%20Tropicales" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1561,10 +1558,10 @@
               </div>
               <div class="menu-card-content">
                 <h3>Jugo Hit de Lulo</h3>
-                <p>El balance perfecto entre ácido y refrescante con todo el sabor del lulo.</p>
+                <p>El balance perfecto entre ácido y refrescante com todo o sabor do lulo.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 500 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Jugo%20de%20Lulo" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1583,7 +1580,7 @@
                 <p>Cerveza bien fría en lata de 473 ml, ideal para acompañar tus tacos.</p>
                 <div class="menu-card-footer">
                   <div class="price">$10.000<small>Lata 473 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Cerveza%20%C3%81guila%20Light" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1602,7 +1599,7 @@
                 <p>Agua purificada fresca y ligera para acompañar cualquier momento.</p>
                 <div class="menu-card-footer">
                   <div class="price">$5.000<small>Botella 600 ml</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Agua%20Pool%20sin%20Gas" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1621,7 +1618,7 @@
                 <p>Botella grande de 1.5 litros para compartir en familia o con amigos.</p>
                 <div class="menu-card-footer">
                   <div class="price">$10.000<small>Botella 1.5 Litros</small></div>
-                  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20Coca-Cola%20Familiar" target="_blank" rel="noopener" class="btn-card">
+                  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-card">
                     Pedir <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1655,7 +1652,7 @@
           <p>Elige cualquiera de nuestros 3 platos mexicanos (Burro, Quesadilla o Tacos) llévalo con Nachos y Gaseosa.</p>
           <div class="promo-card-footer">
             <div class="price">$45.000<small>$60.000</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20la%20S%C3%BAper%20Promo%20de%20%2445.000" target="_blank" rel="noopener" class="btn-promo-card">
+            <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-promo-card">
               Pedir <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -1672,7 +1669,7 @@
           <p>Disfruta 3 deliciosos tacos mixtos combinando nuestras 3 proteínas: pollo, al pastor y birria, ¡más una refrescante gaseosa Quatro!</p>
           <div class="promo-card-footer">
             <div class="price">$30.000<small>$38.000</small></div>
-            <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20pedir%20el%20Combo%20Tacos%20Mixtos%20de%20%2430.000" target="_blank" rel="noopener" class="btn-promo-card">
+            <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-promo-card">
               Pedir <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -1712,7 +1709,7 @@
           <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
             <h4>Contacto Directo</h4>
-            <p>WhatsApp: <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8C%AE" target="_blank" rel="noopener">+57 314 570 5287</a><br>Instagram: <a href="https://instagram.com/tacobons1" target="_blank" rel="noopener">@tacobons1</a></p>
+            <p>WhatsApp: <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">+55 11 95328-5680</a><br>Instagram: <a href="https://instagram.com/tacobons1" target="_blank" rel="noopener">@tacobons1</a></p>
           </div>
         </div>
 
@@ -1731,17 +1728,17 @@
 <section class="cta-final">
   <h2>¿Con antojo del verdadero <span class="highlight">sabor mexicano</span>? 🌮🔥</h2>
   <p>No esperes más. Haz tu pedido ahora y disfruta de la auténtica comida mexicana directo en tu casa o visítanos en La Tebaida.</p>
-  <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Tengo%20antojo%20de%20comida%20mexicana%20%F0%9F%8C%AE%F0%9F%94%A5" target="_blank" rel="noopener" class="btn-giant">
+  <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="btn-giant">
     <i class="fab fa-whatsapp"></i> Hacer mi Pedido Ahora
   </a>
 </section>
 
 <footer>
   <div class="footer-social">
-    <a href="https://instagram.com/tacobons1" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@tacobons1" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20%F0%9F%8C%AE" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/marialabombons/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <div class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></div>
+    <div class="footer-social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></div>
+    <div class="footer-social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></div>
+    <div class="footer-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></div>
   </div>
   
   <img src="./logo-tacobons.png" alt="TacoBons Logo" class="footer-logo-img">
@@ -1749,7 +1746,7 @@
   <div class="footer-divider"></div>
   <p class="footer-dev">
     Diseñado con <span style="color: var(--logo-pink);">🔥 potencia</span> 
-    <a href="https://wa.me/5511953285680?text=Hola%20angelica%20digital%20,%20quiero%20saber%20mas%20sobre%20como%20tener%20mi%20sitio%20web%20y%20vengo%20de%20tacobons" 
+    <a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" 
        target="_blank" 
        rel="noopener" 
        class="angelica-link">
@@ -1759,7 +1756,7 @@
   <p style="color: var(--text-muted); font-size: 12px; margin-top: 12px;">© 2026 TacoBons. Todos los derechos reservados.</p>
 </footer>
 
-<a href="https://wa.me/573145705287?text=%C2%A1Hola%20TacoBons!%20Quiero%20hacer%20un%20pedido%20%F0%9F%9B%97%F0%9F%8C%AE" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
+<a href="https://wa.me/5511953285680?text=Ol%C3%A1%20Ang%C3%A9lica%2C%20quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
   <i class="fab fa-whatsapp" style="color: #120D0A;"></i>
 </a>
 
@@ -1848,18 +1845,6 @@
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
     observer.observe(el);
-  });
-
-  /* Navbar shrink on scroll */
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (navbar) {
-      if (window.scrollY > 60) {
-        navbar.style.padding = '6px 0';
-      } else {
-        navbar.style.padding = '10px 0';
-      }
-    }
   });
 </script>
 
